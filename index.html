@@ -109,7 +109,7 @@
         background-image: url(img/hero-banner-image.jpg);
       }
 
-      @media screen (max-width: 769px) {
+      @media only screen and (max-width: 769px) {
         #main-hero-banner {
           background-image: url(img/hero-banner-image-mobile.jpg);
         }
@@ -545,6 +545,12 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="events__buttons-bottom">
+            <a href="/events.html" class="video-text-style-1__btn btn btn--primary-dark">
+              Все события
+            </a>
           </div>
         </div>
       </div>
@@ -1022,7 +1028,7 @@
             </div>
 
             <div class="featured-event__inner-right">
-              <div class="countdown" data-year="2025" data-month="10" data-day="10">
+              <div class="countdown" data-year="2025" data-month="12" data-day="10">
                 <div class="countdown__item">
                   <span class="countdown__item-top" id="days">00</span>
                   <small class="countdown__item-bottom">Days</small>
@@ -1239,31 +1245,31 @@
                 Присоединяйся к онлайн-курсу
               </p>
 
-              <form class="footer__form form">
+              <form action="" method="post" id="login-form" class="footer__form form">
                 <div class="form__field-group">
                   <label for="name" class="form__label"> Имя </label>
-                  <input size="1" type="text" name="name" id="name" class="form__input" placeholder="Ваше имя" required="required" />
+                  <input size="1" type="text" name="name" id="name" class="form__input" placeholder="Ваше имя" required="required" required />
                 </div>
 
                 <div class="form__field-group">
                   <label for="email" class="form__label"> E-mail </label>
-                  <input size="1" type="email" name="email" id="email" class="form__input" placeholder="example@gmail.com" required="required" />
+                  <input size="1" type="email" name="email" id="email" class="form__input" placeholder="example@gmail.com" required="required" required />
                 </div>
 
                 <div class="form__field-group">
                   <label for="country" class="form__label"> Страна </label>
-                  <input size="1" type="text" name="country" id="country" class="form__input" placeholder="Страна проживания" required="required" />
+                  <input size="1" type="text" name="country" id="country" class="form__input" placeholder="Страна проживания" required="required" required />
                 </div>
 
                 <div class="form__field-group form__field-group--half">
                   <div class="form__field-sub-group">
                     <label for="city" class="form__label"> Город </label>
-                    <input size="1" type="text" name="city" id="city" class="form__input" placeholder="Город проживания" required="required" />
+                    <input size="1" type="text" name="city" id="city" class="form__input" placeholder="Город проживания" required="required" required />
                   </div>
 
                   <div class="form__field-sub-group">
                     <label for="gender" class="form__label"> Пол </label>
-                    <select class="form__input" id="gender" name="select" required="required">
+                    <select class="form__input" id="gender" name="select" required="required" required>
                       <option value="NaN" selected>Не указан</option>
                       <option value="male">Женский</option>
                       <option value="female">Мужской</option>
@@ -1273,11 +1279,27 @@
 
                 <div class="form__field-group">
                   <label for="phone" class="form__label"> Телефон </label>
-                  <input size="1" type="tel" name="phone" id="phone" class="form__input" placeholder="Телефон" pattern="[0-9()#+*-=.]+" title="Принимаются только цифры или телефонные символы (#, -, * и т. д.)." />
+                  <input size="1" type="tel" name="phone" id="phone" class="form__input" placeholder="Телефон" pattern="[0-9]+" title="Принимаются только цифры" required="required" required />
                 </div>
 
                 <input class="form__button btn btn--primary-dark" type="submit" value="Принять участие" />
               </form>
+            </div>
+
+            <div class="footer__form-content-success hide">
+              <div class="footer__form-content-success-wrap">
+                <p class="footer__form-title title-h2">Вы записаны на курс!</p>
+                <p class="footer__form-deskr">
+                  Спасибо за регистрацию! Ваше место подтверждено. Мы отправили
+                  письмо с подробной информацией о курсе, датой начала и
+                  инструкциями по доступу.
+                </p>
+                <div class="footer__form-content-success-button-wrap">
+                  <button id="form-close" class="btn btn--primary-dark">
+                    Назад
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="footer__form-inner-right"></div>
@@ -1289,6 +1311,49 @@
       © Copyright - Bnei Baruch Kabbalah Academy in Europe
     </p>
   </footer>
+
+  <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const country = document.getElementById("country").value;
+      const city = document.getElementById("city").value;
+      const gender = document.getElementById("gender").value;
+      const phone = document.getElementById("phone").value;
+
+      console.log("Form:", name, email, country, city, gender, phone);
+
+      document
+        .querySelector(".footer__form-content-success")
+        .classList.remove("hide");
+
+      // fetch('/api/subscribe', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({
+      //     name: name,
+      //     email: email,
+      //     country: country,
+      //     city: city,
+      //     gender: gender,
+      //     phone: phone
+      //   })
+      // });
+    });
+
+    const formCloseButton = document.getElementById("form-close");
+    const formSuccessMessage = document.querySelector(
+      ".footer__form-content-success"
+    );
+
+    formCloseButton.addEventListener("click", () => {
+      formSuccessMessage.classList.add("hide");
+    });
+  </script>
 
 
 
