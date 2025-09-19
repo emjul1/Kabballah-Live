@@ -21,60 +21,49 @@
   <meta name="twitter:image" content="img/og-image.jpg">
 
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/tailwind.min.css">
   <link rel="stylesheet" href="css/main.min.css">
-  <link rel="stylesheet" href="css/section-hero-banner.min.css">
-  <link rel="stylesheet" href="css/section-img-text-style-1.min.css" />
-  <link rel="stylesheet" href="css/section-text-2-img-style-1.min.css" />
-  <link rel="stylesheet" href="css/section-vertical-carousel.min.css" />
-  <link rel="stylesheet" href="css/section-video-text-style-1.min.css" />
-  <link rel="stylesheet" href="css/section-events.min.css" />
-  <link rel="stylesheet" href="css/section-organizers.min.css" />
-  <link rel="stylesheet" href="css/section-club-history.min.css" />
-  <link rel="stylesheet" href="css/section-text-img-style-1.min.css" />
-  <link rel="stylesheet" href="css/section-quote.min.css" />
-  <link rel="stylesheet" href="css/section-sections-kabbalah.min.css" />
-  <!-- <link rel="stylesheet" href="css/section-three-rows-columns.min.css"/> -->
-  <link rel="stylesheet" href="css/section-video-full-width.min.css" />
-  <link rel="stylesheet" href="css/section-featured-event.min.css" />
-  <link rel="stylesheet" href="css/section-custom-scroll-section.min.css" />
+
+  <link rel="stylesheet" href="css/index.min.css" />
+
 </head>
 
 <body>
 
   <script src="js/libs.min.js"></script>
 
-  <header class="header" id="header">
+  <header class="header bg-[#eeeeee] fixed z-[999] w-full border-b-[#003b65] border-b border-solid left-0 top-0" id="header">
     <div class="header__wrap container">
-      <div class="header__inner">
+      <div class="header__inner backdrop-blur-sm flex justify-between items-center relative px-0 py-4 tablet:px-0 tablet:py-3.5">
         <div class="header__inner-left">
-          <a class="header__logo-link" href="/">
-            <img class="header__logo-img" loading="lazy" src="img/BNEIBARUCH-logo.svg" alt="BNEIBARUCH KABBALAH ACADEMY" width="300" height="50">
+          <a class="header__logo-link block w-[220px] tablet:w-[150px]" href="/">
+            <img class="header__logo-img w-full h-full object-contain" loading="lazy" src="img/BNEIBARUCH-logo.svg" alt="BNEIBARUCH KABBALAH ACADEMY" width="300" height="50">
           </a>
         </div>
-        <div class="header__inner-right">
-          <ul class="header__menu-items">
-            <li class="header__menu-item">
-              <a class="header__menu-item-link" href="#">
+        <div class="header__inner-right flex items-center gap-9 tablet:justify-end tablet:gap-3.5">
+          <ul class="header__menu-items flex items-center gap-8 tablet:absolute tablet:w-screen tablet:max-h-[60vh] tablet:overflow-y-scroll tablet:bg-[#eeeeee] tablet:flex-col tablet:gap-0 tablet:p-4 tablet:border-b-[#003b65] tablet:border-b tablet:border-solid tablet:-left-4 tablet:top-[60px]">
+            <li class="header__menu-item tablet:w-full">
+              <a class="header__menu-item-link text-[#222222] hover:text-[#f36518] text-base font-medium leading-[1.3] tablet:w-full tablet:block tablet:text-center tablet:px-0 tablet:py-4" href="#">
                 События
               </a>
             </li>
-            <li class="header__menu-item">
-              <a class="header__menu-item-link" href="#">
+            <li class="header__menu-item tablet:w-full">
+              <a class="header__menu-item-link text-[#222222] hover:text-[#f36518] text-base font-medium leading-[1.3] tablet:w-full tablet:block tablet:text-center tablet:px-0 tablet:py-4" href="#">
                 О нас
               </a>
             </li>
-            <li class="header__menu-item">
-              <a class="header__menu-item-link" href="#">
+            <li class="header__menu-item tablet:w-full">
+              <a class="header__menu-item-link text-[#222222] hover:text-[#f36518] text-base font-medium leading-[1.3] tablet:w-full tablet:block tablet:text-center tablet:px-0 tablet:py-4" href="#">
                 О Каббале
               </a>
             </li>
           </ul>
 
-          <button class="header__language">
+          <button class="header__language inline-flex items-center bg-transparent m-0 p-0.5 rounded-[unset] border-[unset]">
             <span class="visually-hidden">
               Выберите язык
             </span>
-            <svg class="header__language-arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <svg class="header__language-arrow mr-2 tablet:mr-1" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
               <g opacity="0.5">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.85149 7.6018C5.20947 7.24382 5.78988 7.24382 6.14786 7.6018L10.9997 12.4536L15.8515 7.6018C16.2095 7.24382 16.7899 7.24382 17.1479 7.6018C17.5058 7.95978 17.5058 8.54018 17.1479 8.89816L10.9997 15.0463L4.85149 8.89816C4.49351 8.54018 4.49351 7.95978 4.85149 7.6018Z" fill="#003B65" />
               </g>
@@ -85,7 +74,7 @@
             </svg>
           </button>
 
-          <button class="header__menu-burder">
+          <button class="header__menu-burder bg-transparent hidden m-0 p-0 border-[unset] tablet:flex">
             <span class="visually-hidden">Открыть меню</span>
             <svg class="open-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="22" viewBox="0 0 27 22" fill="none">
               <rect width="27" height="2" fill="#003B65" />
@@ -102,31 +91,33 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="mt-20 tablet:mt-[60px]">
 
     <style>
-      #main-hero-banner {
+      #main-hero-banner.hero-banner {
         background-image: url(img/hero-banner-image.jpg);
       }
 
       @media only screen and (max-width: 769px) {
-        #main-hero-banner {
+        #main-hero-banner.hero-banner {
           background-image: url(img/hero-banner-image-mobile.jpg);
         }
       }
     </style>
 
-    <section id="main-hero-banner" class="hero-banner">
+    <section id="main-hero-banner" class="hero-banner bg-no-repeat bg-cover bg-center flex flex-col justify-end mb-4 relative">
       <div class="hero-banner__wrap container">
-        <div class="hero-banner__inner">
-          <h1 class="hero-banner__title title-h1">Берлинский клуб Каббалы</h1>
-          <span class="hero-banner__label"><strong>Древнее тайное учение</strong></span>
-          <div class="hero-banner__text">
+        <div class="hero-banner__inner relative max-w-[775px] px-[38px] py-12 tablet:px-0 tablet:py-10">
+          <h1 class="hero-banner__title title-h1 text-white mb-6 tablet:mb-4">
+            Берлинский клуб Каббалы
+          </h1>
+          <span class="hero-banner__label text-[#f36518] text-xl font-semibold leading-normal mb-1 tablet:text-base tablet:mb-1"><strong>Древнее тайное учение</strong></span>
+          <div class="hero-banner__text text-white text-xl font-normal leading-normal tablet:text-base">
             <p>Знакомство с аутентичной каббалой Ари-Ашлага-Лайтмана</p>
           </div>
 
-          <div class="hero-banner__subtext">
-            <p>Участие в виртуальных и физических встречах клуба — это возможность:</p>
+          <div class="hero-banner__subtext mt-6 text-white text-base font-normal leading-[1.3] tablet:mt-4">
+            <p class="font-semibold">Участие в виртуальных и физических встречах клуба — это возможность:</p>
             <ul>
               <li>Познакомиться с организаторами клуба</li>
               <li>Поговорить с опытными преподавателями</li>
@@ -136,8 +127,8 @@
             </ul>
           </div>
 
-          <div class="hero-banner__btns-wrapper">
-            <div class="hero-banner__btns-wrap">
+          <div class="hero-banner__btns-wrapper w-fit">
+            <div class="hero-banner__btns-wrap w-fit flex gap-9 flex-wrap mt-14 tablet:gap-2 tablet:mt-8">
 
               <a class="hero-banner__btn btn btn--secondary-light" href="#">
                 Принять участие <svg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -160,7 +151,9 @@
 
             </div>
 
-            <div class="hero-banner__btn-subtitle">Получите уведомление и приглашение на еженедельную вирт.встречу клуба через WhatsApp</div>
+            <div class="hero-banner__btn-subtitle text-white text-xs mt-1 font-semibold leading-[1.1]">
+              Получите уведомление и приглашение на еженедельную вирт.встречу клуба через WhatsApp
+            </div>
 
           </div>
         </div>
@@ -168,13 +161,13 @@
     </section>
 
 
-    <section id="img-text-s1-1" class="vertical-carousel">
+    <section id="img-text-s1-1" class="vertical-carousel mt-4 mb-4 relative">
       <div class="vertical-carousel__wrapper container">
-        <div class="vertical-carousel__wrap">
-          <div class="vertical-carousel__text-inner">
-            <h2 class="vertical-carousel__title title-h2">Для кого</h2>
-            <span class="vertical-carousel__label">Для тех, кто задается вопросами</span>
-            <div class="vertical-carousel__content">
+        <div class="vertical-carousel__wrap bg-gray-200 flex rounded-[20px] tablet:flex-col-reverse">
+          <div class="vertical-carousel__text-inner flex-[0_0_40%] flex flex-col justify-center px-10 py-[68px] tablet:px-4 tablet:py-10">
+            <h2 class="vertical-carousel__title title-h2 mb-8 tablet:mb-6">Для кого</h2>
+            <span class="vertical-carousel__label text-[#003b65] text-lg font-bold leading-normal block mb-6">Для тех, кто задается вопросами</span>
+            <div class="vertical-carousel__content text-base font-normal leading-normal">
               <ul>
                 <li>Кто я? Откуда пришел и куда иду?</li>
                 <li>Как найти смысл жизни и свое предназначение?</li>
@@ -184,72 +177,72 @@
             </div>
 
           </div>
-          <div class="vertical-carousel__carousel-inner">
-            <div class="vertical-carousel__carousel-inner-wrap">
-              <div class="vertical-carousel__swiper vertical-carousel__swiper--1 swiper">
-                <div class="vertical-carousel__swiper-wrapper swiper-wrapper">
+          <div class="vertical-carousel__carousel-inner flex-[0_0_60%] bg-[#003b65] overflow-hidden rounded-[20px] tablet:px-[18px] tablet:py-0">
+            <div class="vertical-carousel__carousel-inner-wrap h-full flex gap-9 justify-center max-h-[min(45vh,700px)] tablet:max-h-[unset] tablet:gap-[18px]">
+              <div class="vertical-carousel__swiper vertical-carousel__swiper--1 swiper w-64 h-full m-0">
+                <div class="vertical-carousel__swiper-wrapper swiper-wrapper w-64">
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-1.jpg" alt="Собрание в зале" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-1.jpg" alt="Собрание в зале" height="400" width="300" />
                     </div>
                   </div>
 
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-3.jpg" alt="Михаэль Лайтман" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-3.jpg" alt="Михаэль Лайтман" height="400" width="300" />
                     </div>
                   </div>
 
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-5.jpg" alt="курс Основы каббалы" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-5.jpg" alt="курс Основы каббалы" height="400" width="300" />
                     </div>
                   </div>
 
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-6.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-6.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
                     </div>
                   </div>
 
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-9.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-9.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
                     </div>
                   </div>
 
                 </div>
               </div>
 
-              <div class="vertical-carousel__swiper vertical-carousel__swiper--2 swiper">
-                <div class="vertical-carousel__swiper-wrapper swiper-wrapper">
+              <div class="vertical-carousel__swiper vertical-carousel__swiper--2 swiper w-64 h-full m-0">
+                <div class="vertical-carousel__swiper-wrapper swiper-wrapper w-64">
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-10.jpg" alt="Освобождение от страхов и стереотипов" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-10.jpg" alt="Освобождение от страхов и стереотипов" height="400" width="300" />
                     </div>
                   </div>
 
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-4.jpg" alt="Михаэль Лайтман" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-4.jpg" alt="Михаэль Лайтман" height="400" width="300" />
                     </div>
                   </div>
 
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-7.jpg" alt="Механизм принятия решений" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-7.jpg" alt="Механизм принятия решений" height="400" width="300" />
                     </div>
                   </div>
 
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-8.jpg" alt="Михаэль Лайтман" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-8.jpg" alt="Михаэль Лайтман" height="400" width="300" />
                     </div>
                   </div>
 
                   <div class="vertical-carousel__swiper-slide swiper-slide">
-                    <div class="vertical-carousel__swiper-slide-inner">
-                      <img class="vertical-carousel__swiper-slide-img" src="img/vertical-carousel-2.jpg" alt="Глубокое понимание человеческой природы" height="400" width="300" />
+                    <div class="vertical-carousel__swiper-slide-inner h-full w-full px-0">
+                      <img class="vertical-carousel__swiper-slide-img border w-full h-full object-cover rounded-[20px] border-solid border-[rgba(255,255,255,0.5)]" src="img/vertical-carousel-2.jpg" alt="Глубокое понимание человеческой природы" height="400" width="300" />
                     </div>
                   </div>
 
@@ -305,16 +298,18 @@
 
     <style>
       #img-text-s1-1.img-text-style-1::before {
-        background-image: url(img/book.jpg);
+        background-image: url(img/for-those-who-want.jpg);
       }
     </style>
 
-    <section id="img-text-s1-1" class="img-text-style-1">
-      <div class="img-text-style-1__wrapper">
-        <div class="img-text-style-1__wrap container">
-          <div class="img-text-style-1__inner">
-            <h2 class="img-text-style-1__title title-h2">Для тех, кто хочет</h2>
-            <div class="img-text-style-1__content">
+    <section id="img-text-s1-1" class="img-text-style-1 relative my-4 px-4 py-0">
+      <div class="img-text-style-1__wrapper bg-gray-200 rounded-[20px]">
+        <div class="img-text-style-1__wrap container relative p-0 rounded-[20px] tablet:px-4 tablet:py-0">
+          <div class="img-text-style-1__inner max-w-[60%] bg-gray-200 ml-auto px-10 py-[68px] rounded-[20px] tablet:max-w-full tablet:bg-transparent tablet:mt-[300px] tablet:pt-14 tablet:pb-10 tablet:px-0">
+            <h2 class="img-text-style-1__title title-h2 mb-8 tablet:mb-6">
+              Для тех, кто хочет
+            </h2>
+            <div class="img-text-style-1__content text-base font-normal leading-normal">
               <ul>
                 <li>Освободиться от тревог и начать жить более уверенно</li>
                 <li>Найти понимание с другими людьми</li>
@@ -323,7 +318,7 @@
               </ul>
             </div>
 
-            <div class="img-text-style-1__buttons">
+            <div class="img-text-style-1__buttons flex flex-wrap gap-6 mt-8 tablet:gap-2 tablet:mt-6">
 
               <a href="#" class="img-text-style-1__btn btn btn--primary-dark">
                 Принять участие
@@ -341,44 +336,51 @@
     </section>
 
 
-    <section id="text-2-img-s1-1" class="text-2-img-style-1">
+    <section id="text-2-img-s1-1" class="text-2-img-style-1 mx-0 my-4">
       <div class="text-2-img-style-1__wrap container">
-        <div class="text-2-img-style-1__inner">
-          <div class="text-2-img-style-1__text-wrap">
-            <div class="text-2-img-style-1__text-container" style="background-color: #eeeeee">
-              <h2 class="text-2-img-style-1__title title-h2">О нас</h2>
-              <div class="text-2-img-style-1__text">
+        <div class="text-2-img-style-1__inner flex gap-4 tablet:flex-col-reverse">
+          <div class="text-2-img-style-1__text-wrap flex-[0_0_calc(50%_-_8px)] flex flex-col gap-4">
+            <div class="text-2-img-style-1__text-container px-10 py-11 rounded-[20px] tablet:px-4 tablet:py-10" style="background-color: #eeeeee">
+              <h2 class="text-2-img-style-1__title title-h2 mb-7 tablet:mb-4">
+                О нас
+              </h2>
+              <div class="text-2-img-style-1__text text-base font-normal leading-normal">
                 <p>"Бней Барух" (в Израиле также имеет второе название «Каббала Ла-Ам») — это некоммерческая и неправительственная организация, занимающаяся образовательской и научно-исследовательской деятельностью в области классической науки каббала.</p>
               </div>
             </div>
-            <div class="text-2-img-style-1__text-container" style="background-color: #D2E5F4">
-              <h2 class="text-2-img-style-1__title title-h2">Локация</h2>
-              <div class="text-2-img-style-1__text">
+            <div class="text-2-img-style-1__text-container px-10 py-11 rounded-[20px] tablet:px-4 tablet:py-10" style="background-color: #D2E5F4">
+              <h2 class="text-2-img-style-1__title title-h2 mb-7 tablet:mb-4">
+                Локация
+              </h2>
+              <div class="text-2-img-style-1__text text-base font-normal leading-normal">
                 <p>Штаб-квартира организации расположена в Петах-Тикве (Израиль) с обширной сетью филиалов в Израиле и в более чем 150 странах мира. Интернет-платформами "Бней Барух" ежедневно пользуются более 600 000 студентов и 4 миллиона онлайн-пользователей.</p>
               </div>
             </div>
           </div>
-          <div class="text-2-img-style-1__img-wrap">
-            <img class="text-2-img-style-1__img" src="img/about-us.jpg" alt="О нас" height="600" width="1000" />
+          <div class="text-2-img-style-1__img-wrap flex-[0_0_calc(50%_-_8px)] relative">
+            <img class="text-2-img-style-1__img absolute w-full h-full object-cover rounded-[20px] inset-0 tablet:static tablet:w-full tablet:h-[40vh]" src="img/about-us.jpg" alt="О нас" height="600" width="1000" />
           </div>
         </div>
       </div>
     </section>
 
 
-    <section class="video-text-style-1">
-      <div class="video-text-style-1__wrapper">
-        <div class="video-text-style-1__inner container">
-          <div class="video-text-style-1__video-wrap">
-            <iframe width="420" height="315" src="https://www.youtube.com/embed/kjDIAgeO55o"> </iframe>
+    <section class="video-text-style-1 mx-0 my-4 px-4 py-0">
+      <div class="video-text-style-1__wrapper bg-gray-200 px-0 py-10 rounded-[20px]">
+        <div class="video-text-style-1__inner container flex items-center justify-center tablet:flex-col">
+          <div class="video-text-style-1__video-wrap flex-[0_0_50%] w-full flex items-center justify-center aspect-video pr-9 tablet:mb-7 tablet:p-0">
+            <iframe class="w-full h-full rounded-[20px] border-[none]" width="420" height="315" src="https://www.youtube.com/embed/kjDIAgeO55o">
+            </iframe>
           </div>
-          <div class="video-text-style-1__text-wrap">
-            <h2 class="video-text-style-1__title title-h2">Ежедневные уроки и уникальный архив</h2>
-            <div class="video-text-style-1__content">
+          <div class="video-text-style-1__text-wrap flex-[0_0_50%] pl-9 tablet:p-0">
+            <h2 class="video-text-style-1__title title-h2 mb-8 tablet:mb-6">
+              Ежедневные уроки и уникальный архив
+            </h2>
+            <div class="video-text-style-1__content text-base font-normal leading-normal">
               <p>"Бней Барух" ежедневно транслирует лекции и передачи по каббале доктора философии, ученого, каббалиста Михаэля Лайтмана и ведущих преподавателей "Бней Барух" с синхронным переводом на более чем 30 языков. Все материалы доступны в свободном доступе в архиве "Каббала Медиа" (<a href='www.kabbalahmedia.info' target='_blank'>www.kabbalahmedia.info</a>), который является единственным порталом в мире, соде1ржащим более 20 000 уроков по Каббале, 3000 оригинальных рукописей каббалистов и более 2 миллионов файлов, содержащих книги, статьи и многое другое. Как прямые трансляции, так и их записи в архиве доступны бесплатно.</p>
             </div>
 
-            <div class="video-text-style-1__buttons">
+            <div class="video-text-style-1__buttons flex flex-wrap gap-2 mt-8 tablet:mt-6">
 
               <a href="#" class="video-text-style-1__btn btn btn--primary-dark">
                 Принять участие
@@ -396,37 +398,37 @@
     </section>
 
 
-    <section id="events" class="events">
+    <section id="events" class="events mx-0 my-4">
       <div class="events__wrapper container">
-        <div class="events__inner">
-          <h2 class="events__title title-h2">События</h2>
+        <div class="events__inner px-0 py-9 tablet:px-0 tablet:py-5">
+          <h2 class="events__title title-h2 text-center mb-[30px] tablet:mb-[18px]">События</h2>
 
           <div class="events__content">
             <div class="events__swiper swiper">
               <div class="events__swiper-wrapper swiper-wrapper">
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Освобождение от страхов и стереотипов</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Освобождение от страхов и стереотипов</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -435,29 +437,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Механизм принятия решений</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Механизм принятия решений</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -466,29 +468,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Глубокое понимание человеческой природы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Глубокое понимание человеческой природы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -497,29 +499,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Основы каббалы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Основы каббалы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -528,29 +530,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Развитие правильных связей в семье и на работе</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Развитие правильных связей в семье и на работе</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -561,14 +563,14 @@
 
               </div>
 
-              <div class="events__swiper-buttons-wrap">
-                <div class="events__swiper-button-prev swiper-button-prev">
+              <div class="events__swiper-buttons-wrap flex gap-4 justify-center items-center mt-[30px] tablet:mt-[18px]">
+                <div class="events__swiper-button-prev swiper-button-prev static bg-[#003b65] inline-flex items-center justify-center w-10 h-10 transition-all duration-[0.2s] ease-[ease] m-0 rounded-xl">
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M14 1.5L2 13L14 24.5" stroke="white" stroke-width="1.5" stroke-linecap="round" />
                   </svg>
                 </div>
-                <div class="events__swiper-pagination swiper-pagination"></div>
-                <div class="events__swiper-button-next swiper-button-next">
+                <div class="events__swiper-pagination swiper-pagination static inline-flex"></div>
+                <div class="events__swiper-button-next swiper-button-next static bg-[#003b65] inline-flex items-center justify-center w-10 h-10 transition-all duration-[0.2s] ease-[ease] m-0 rounded-xl">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
                     <path d="M1.5 1.5L12.5 13L1.5 24.5" stroke="white" stroke-width="1.5" stroke-linecap="round" />
                   </svg>
@@ -577,7 +579,7 @@
             </div>
           </div>
 
-          <div class="events__buttons-bottom">
+          <div class="events__buttons-bottom mt-[30px] text-center tablet:mt-[18px]">
             <a href="/Kabballah-Live/events.html" class="video-text-style-1__btn btn btn--primary-dark">
               Все события
             </a>
@@ -615,21 +617,23 @@
       });
     </script>
 
-    <section id="organizers" class="organizers">
+    <section id="organizers" class="organizers mx-0 my-4">
       <div class="organizers__wrapper container">
-        <div class="organizers__inner">
-          <h2 class="organizers__title title-h2">Организаторы клуба</h2>
+        <div class="organizers__inner px-0 py-9 tablet:px-0 tablet:py-5">
+          <h2 class="organizers__title title-h2 text-center mb-[30px]">Организаторы клуба</h2>
 
           <div class="organizers__content">
-            <ul class="organizers__items">
+            <ul class="organizers__items grid grid-cols-[1fr_1fr_1fr] gap-4 tablet:max-w-[400px] tablet:grid-cols-[1fr] tablet:mx-auto tablet:my-0">
               <li class="organizers__item">
-                <div class="organizers__item-inner">
-                  <div class="organizers__item-img-wrap">
-                    <img class="organizers__item-img" src="img/og-image.jpg" alt="Илья Сапиро" height="400" width="300" />
+                <div class="organizers__item-inner bg-neutral-100 h-full rounded-[20px]">
+                  <div class="organizers__item-img-wrap w-full h-80 s-phone:h-[min(38vh,400px)]">
+                    <img class="organizers__item-img w-full h-full object-cover rounded-[20px]" src="img/og-image.jpg" alt="Илья Сапиро" height="400" width="300" />
                   </div>
-                  <div class="organizers__item-content-wrap">
-                    <h3 class="organizers__item-title title-h3">Илья Сапиро</h3>
-                    <div class="organizers__item-text">
+                  <div class="organizers__item-content-wrap p-10 tablet:px-4 tablet:py-5">
+                    <h3 class="organizers__item-title title-h3 text-xl text-[#003b65] mb-4 tablet:mb-[12px]">
+                      Илья Сапиро
+                    </h3>
+                    <div class="organizers__item-text opacity-80 text-base font-normal leading-normal">
                       <p>Илья Сапиро, доктор-хирург, преподаватель Каббалы с 2006 года, основатель берлинского клуба каббалы.</p>
                     </div>
                   </div>
@@ -637,13 +641,15 @@
               </li>
 
               <li class="organizers__item">
-                <div class="organizers__item-inner">
-                  <div class="organizers__item-img-wrap">
-                    <img class="organizers__item-img" src="img/og-image.jpg" alt="Борис Коссев" height="400" width="300" />
+                <div class="organizers__item-inner bg-neutral-100 h-full rounded-[20px]">
+                  <div class="organizers__item-img-wrap w-full h-80 s-phone:h-[min(38vh,400px)]">
+                    <img class="organizers__item-img w-full h-full object-cover rounded-[20px]" src="img/og-image.jpg" alt="Борис Коссев" height="400" width="300" />
                   </div>
-                  <div class="organizers__item-content-wrap">
-                    <h3 class="organizers__item-title title-h3">Борис Коссев</h3>
-                    <div class="organizers__item-text">
+                  <div class="organizers__item-content-wrap p-10 tablet:px-4 tablet:py-5">
+                    <h3 class="organizers__item-title title-h3 text-xl text-[#003b65] mb-4 tablet:mb-[12px]">
+                      Борис Коссев
+                    </h3>
+                    <div class="organizers__item-text opacity-80 text-base font-normal leading-normal">
                       <p>IT-consultant, инженер, преподаватель Каббалы с 2009 года, основатель берлинского клуба каббалы.</p>
                     </div>
                   </div>
@@ -651,13 +657,15 @@
               </li>
 
               <li class="organizers__item">
-                <div class="organizers__item-inner">
-                  <div class="organizers__item-img-wrap">
-                    <img class="organizers__item-img" src="img/og-image.jpg" alt="Барух Меламед" height="400" width="300" />
+                <div class="organizers__item-inner bg-neutral-100 h-full rounded-[20px]">
+                  <div class="organizers__item-img-wrap w-full h-80 s-phone:h-[min(38vh,400px)]">
+                    <img class="organizers__item-img w-full h-full object-cover rounded-[20px]" src="img/og-image.jpg" alt="Барух Меламед" height="400" width="300" />
                   </div>
-                  <div class="organizers__item-content-wrap">
-                    <h3 class="organizers__item-title title-h3">Барух Меламед</h3>
-                    <div class="organizers__item-text">
+                  <div class="organizers__item-content-wrap p-10 tablet:px-4 tablet:py-5">
+                    <h3 class="organizers__item-title title-h3 text-xl text-[#003b65] mb-4 tablet:mb-[12px]">
+                      Барух Меламед
+                    </h3>
+                    <div class="organizers__item-text opacity-80 text-base font-normal leading-normal">
                       <p>Меламед, магистр-музыки, преподаватель Каббалы с 2002 г, Израиль(Петах-Тиква).</p>
                     </div>
                   </div>
@@ -671,39 +679,43 @@
     </section>
 
 
-    <section id="club-history" class="club-history">
+    <section id="club-history" class="club-history mx-0 my-4">
       <div class="club-history__wrapper container">
-        <div class="club-history__inner">
-          <h2 class="club-history__title title-h2">История работы берлинского клуба</h2>
+        <div class="club-history__inner px-0 py-9 tablet:px-0 tablet:py-5">
+          <h2 class="club-history__title title-h2 text-center mb-[30px] tablet:mb-[18px]">
+            История работы берлинского клуба
+          </h2>
 
           <div class="club-history__content">
-            <ul class="club-history__items">
-              <li class="club-history__item">
-                <div class="club-history__item-left">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
+            <ul class="club-history__items grid grid-cols-[1fr_1fr] gap-4 tablet:grid-cols-[1fr]">
+              <li class="club-history__item bg-[#eeeeee] h-full flex items-center min-h-[140px] px-10 py-4 rounded-[20px] tablet:flex-col tablet:items-start tablet:px-4 tablet:py-6">
+                <div class="club-history__item-left flex-[0_0_36px] mr-[30px] tablet:mt-0 tablet:mb-4 tablet:mx-0">
+                  <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 3.875C9.9225 3.875 3.375 10.4225 3.375 18.5C3.375 26.5775 9.9225 33.125 18 33.125C26.0775 33.125 32.625 26.5775 32.625 18.5C32.625 10.4225 26.0775 3.875 18 3.875ZM19.125 9.5C19.125 9.20163 19.0065 8.91548 18.7955 8.7045C18.5845 8.49353 18.2984 8.375 18 8.375C17.7016 8.375 17.4155 8.49353 17.2045 8.7045C16.9935 8.91548 16.875 9.20163 16.875 9.5V18.5C16.875 19.121 17.379 19.625 18 19.625H24.75C25.0484 19.625 25.3345 19.5065 25.5455 19.2955C25.7565 19.0845 25.875 18.7984 25.875 18.5C25.875 18.2016 25.7565 17.9155 25.5455 17.7045C25.3345 17.4935 25.0484 17.375 24.75 17.375H19.125V9.5Z" fill="#F36518" />
                   </svg>
                 </div>
                 <div class="club-history__item-right">
-                  <h3 class="club-history__item-title title-h3">
+                  <h3 class="club-history__item-title title-h3 leading-[1.1] mb-2">
                     Берлинский учебный центр
                   </h3>
-                  <div class="club-history__item-text">
+                  <div class="club-history__item-text opacity-80 text-base font-normal leading-normal">
                     По изучению подлинной каббалы действует с 2002 года.
                   </div>
                 </div>
               </li>
 
-              <li class="club-history__item">
-                <div class="club-history__item-left">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+              <li class="club-history__item bg-[#eeeeee] h-full flex items-center min-h-[140px] px-10 py-4 rounded-[20px] tablet:flex-col tablet:items-start tablet:px-4 tablet:py-6">
+                <div class="club-history__item-left flex-[0_0_36px] mr-[30px] tablet:mt-0 tablet:mb-4 tablet:mx-0">
+                  <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
                     <path d="M24.1654 8.00016C24.1654 10.3013 22.2999 12.1668 19.9988 12.1668C17.6974 12.1668 15.832 10.3013 15.832 8.00016C15.832 5.69898 17.6974 3.8335 19.9988 3.8335C22.2999 3.8335 24.1654 5.69898 24.1654 8.00016Z" fill="#F36518" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0004 16.7842C19.4067 16.7842 18.8686 16.8183 18.5652 16.8697L17.0792 17.12C13.7251 17.6848 11.2503 20.6225 11.2503 24.0835C11.2503 25.8848 10.3595 27.5723 8.86779 28.5772L8.69907 28.6908C8.27446 28.9768 7.81367 29.2047 7.32884 29.3678L5.39934 30.0178C4.74509 30.2382 4.03609 29.8863 3.81572 29.2322C3.59537 28.578 3.94711 27.869 4.60134 27.6485L6.53084 26.9987C6.80329 26.9068 7.06276 26.7787 7.30234 26.6173L7.47106 26.5037C8.26706 25.9675 8.75034 25.0605 8.75034 24.0835C8.75034 19.4208 12.088 15.4254 16.6641 14.6547L18.1474 14.4049C18.6547 14.319 19.3556 14.2842 20.0002 14.2842C20.6449 14.2841 21.3451 14.3187 21.8527 14.4048L23.3366 14.6547C27.9127 15.4254 31.2504 19.4208 31.2504 24.0835C31.2504 25.0605 31.7336 25.9675 32.5296 26.5037L32.6984 26.6173C32.9379 26.7787 33.1974 26.9068 33.4699 26.9987L35.3994 27.6485C36.0536 27.869 36.4052 28.578 36.1849 29.2322C35.9646 29.8863 35.2556 30.2382 34.6014 30.0178L32.6719 29.3678C32.1871 29.2047 31.7262 28.9768 31.3016 28.6908L31.1329 28.5772C29.6412 27.5723 28.7504 25.8848 28.7504 24.0835C28.7504 20.6225 26.2756 17.6848 22.9214 17.12L21.4351 16.8697C21.1321 16.8182 20.5941 16.7842 20.0004 16.7842ZM14.8337 26.4165C15.2479 25.8642 16.0314 25.7523 16.5837 26.1665C17.1359 26.5807 17.2479 27.3642 16.8337 27.9165L15.2928 29.971C15.2806 29.9873 15.2685 30.0033 15.2566 30.0193C15.0459 30.3005 14.8802 30.5215 14.6892 30.7212C14.2195 31.2122 13.6465 31.5927 13.0116 31.835C12.7535 31.9335 12.4855 32.0005 12.1446 32.0855C12.1253 32.0903 12.1058 32.0953 12.086 32.1002L9.09696 32.8475C8.40349 33.0208 7.91701 33.644 7.91701 34.3587C7.91701 35.219 8.61444 35.9165 9.47477 35.9165H10.6144C13.1909 35.9165 15.6979 35.0808 17.7591 33.535L20.9171 31.1665C21.4692 30.7523 22.2527 30.8642 22.6671 31.4165C23.0812 31.9688 22.9692 32.7523 22.4171 33.1665L20.9092 34.2973L21.7289 34.6047C22.6187 34.9383 23.0201 35.0883 23.4232 35.2145C24.6369 35.5938 25.8929 35.8215 27.1624 35.8925C27.5842 35.916 28.0127 35.9165 28.9631 35.9165H30.5259C31.3862 35.9165 32.0837 35.219 32.0837 34.3587C32.0837 33.644 31.5972 33.0208 30.9037 32.8475L28.4477 32.2335C28.4017 32.222 28.3562 32.2107 28.3114 32.1995C27.5186 32.0018 26.8931 31.846 26.3342 31.5237C26.1671 31.4273 26.0062 31.3205 25.8526 31.2038C25.3387 30.8138 24.9522 30.2978 24.4624 29.6438C24.4347 29.6068 24.4066 29.5693 24.3782 29.5313L23.1671 27.9165C22.7527 27.3642 22.8647 26.5807 23.4171 26.1665C23.9692 25.7523 24.7527 25.8642 25.1671 26.4165L26.3782 28.0313C26.9924 28.8503 27.1641 29.0607 27.3641 29.2125C27.4339 29.2655 27.5069 29.314 27.5829 29.3578C27.8004 29.4833 28.0611 29.5598 29.0541 29.8082L31.5101 30.4222C33.3164 30.8737 34.5837 32.4968 34.5837 34.3587C34.5837 36.5998 32.7669 38.4165 30.5259 38.4165H28.9211C28.0236 38.4165 27.5226 38.4165 27.0229 38.3887C25.5474 38.3062 24.0879 38.0415 22.6774 37.6007C22.1997 37.4513 21.7307 37.2753 20.8904 36.9602L18.5031 36.065C16.1638 37.5957 13.4232 38.4165 10.6144 38.4165H9.47477C7.23372 38.4165 5.41701 36.5998 5.41701 34.3587C5.41701 32.4968 6.68424 30.8737 8.49062 30.4222L11.4796 29.6748C11.9058 29.5683 12.0196 29.5377 12.12 29.4993C12.4086 29.3893 12.6691 29.2163 12.8826 28.9932C12.9569 28.9153 13.0293 28.8223 13.2928 28.471L14.8337 26.4165Z" fill="#F36518" />
                   </svg>
                 </div>
                 <div class="club-history__item-right">
-                  <h3 class="club-history__item-title title-h3">Публикации</h3>
-                  <div class="club-history__item-text">
+                  <h3 class="club-history__item-title title-h3 leading-[1.1] mb-2">
+                    Публикации
+                  </h3>
+                  <div class="club-history__item-text opacity-80 text-base font-normal leading-normal">
                     В газетах, журналах и книгах на тему «Каббала и современность».
                     Каждый человек может найти духовность в себе и открыть с её
                     помощью новую реальность.
@@ -711,56 +723,60 @@
                 </div>
               </li>
 
-              <li class="club-history__item">
-                <div class="club-history__item-left">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+              <li class="club-history__item bg-[#eeeeee] h-full flex items-center min-h-[140px] px-10 py-4 rounded-[20px] tablet:flex-col tablet:items-start tablet:px-4 tablet:py-6">
+                <div class="club-history__item-left flex-[0_0_36px] mr-[30px] tablet:mt-0 tablet:mb-4 tablet:mx-0">
+                  <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M34.5846 28.3572C34.5846 28.4385 34.5768 28.5182 34.562 28.5952C34.5768 28.6723 34.5846 28.7518 34.5846 28.8333C34.5846 29.5237 34.025 30.0833 33.3346 30.0833H10.0013C8.8507 30.0833 7.91797 31.016 7.91797 32.1667C7.91797 33.3173 8.8507 34.25 10.0013 34.25H33.3346C34.025 34.25 34.5846 34.8097 34.5846 35.5C34.5846 36.1903 34.025 36.75 33.3346 36.75H10.0013C7.47 36.75 5.41797 34.698 5.41797 32.1667V8.83333C5.41797 6.30203 7.47 4.25 10.0013 4.25H32.3346C33.5773 4.25 34.5846 5.25737 34.5846 6.5V28.3572ZM15.0013 10.9167C14.311 10.9167 13.7513 11.4763 13.7513 12.1667C13.7513 12.857 14.311 13.4167 15.0013 13.4167H25.0013C25.6916 13.4167 26.2513 12.857 26.2513 12.1667C26.2513 11.4763 25.6916 10.9167 25.0013 10.9167H15.0013Z" fill="#F36518" />
                   </svg>
                 </div>
                 <div class="club-history__item-right">
-                  <h3 class="club-history__item-title title-h3">
+                  <h3 class="club-history__item-title title-h3 leading-[1.1] mb-2">
                     Что происходит в учебном центре?
                   </h3>
-                  <div class="club-history__item-text">
+                  <div class="club-history__item-text opacity-80 text-base font-normal leading-normal">
                     Здесь изучают науку Каббала — древнее учение о духовности,
                     которая в XXI веке раскрывается как путь отдачи и любви.
                   </div>
                 </div>
               </li>
 
-              <li class="club-history__item">
-                <div class="club-history__item-left">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+              <li class="club-history__item bg-[#eeeeee] h-full flex items-center min-h-[140px] px-10 py-4 rounded-[20px] tablet:flex-col tablet:items-start tablet:px-4 tablet:py-6">
+                <div class="club-history__item-left flex-[0_0_36px] mr-[30px] tablet:mt-0 tablet:mb-4 tablet:mx-0">
+                  <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
                     <path d="M39.6004 13.7154C39.6004 12.0501 38.2503 10.7 36.585 10.7H30.5542V4.6692C30.5542 3.00379 29.2043 1.65373 27.5389 1.65381H3.41578C1.75038 1.65373 0.400391 3.00379 0.400391 4.6692V28.7923C0.404016 29.9529 1.66267 30.6744 2.66598 30.0909C2.7305 30.0534 2.79214 30.0111 2.85039 29.9645L9.44655 24.6461V30.3C9.44655 31.9653 10.7966 33.3153 12.4619 33.3154H30.1L37.1504 39.0107C37.4172 39.2264 37.7496 39.3448 38.0927 39.3461C38.9253 39.3461 39.6004 38.6711 39.6004 37.8384V13.7154ZM31.5813 30.6354C31.3146 30.4196 30.9822 30.3013 30.639 30.3H12.4619V24.2692H27.5389C29.2042 24.2691 30.5542 22.9191 30.5542 21.2538V13.7154H36.585V34.6817L31.5813 30.6354Z" fill="#F36518" />
                   </svg>
                 </div>
                 <div class="club-history__item-right">
-                  <h3 class="club-history__item-title title-h3">Медиа-проекты</h3>
-                  <div class="club-history__item-text">
+                  <h3 class="club-history__item-title title-h3 leading-[1.1] mb-2">
+                    Медиа-проекты
+                  </h3>
+                  <div class="club-history__item-text opacity-80 text-base font-normal leading-normal">
                     Эфиры на радио и телевидении, посвящённые поиску решений
                     актуальных проблем современности.
                   </div>
                 </div>
               </li>
 
-              <li class="club-history__item">
-                <div class="club-history__item-left">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+              <li class="club-history__item bg-[#eeeeee] h-full flex items-center min-h-[140px] px-10 py-4 rounded-[20px] tablet:flex-col tablet:items-start tablet:px-4 tablet:py-6">
+                <div class="club-history__item-left flex-[0_0_36px] mr-[30px] tablet:mt-0 tablet:mb-4 tablet:mx-0">
+                  <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
                     <path d="M0.400391 11.7887C0.400391 9.3863 2.35359 7.43311 4.75595 7.43311H22.1782C24.5805 7.43311 26.5337 9.3863 26.5337 11.7887V29.2109C26.5337 31.6132 24.5805 33.5664 22.1782 33.5664H4.75595C2.35359 33.5664 0.400391 31.6132 0.400391 29.2109V11.7887ZM38.4503 9.86949C39.158 10.2506 39.6004 10.9856 39.6004 11.7887V29.2109C39.6004 30.0139 39.158 30.7489 38.4503 31.1301C37.7425 31.5112 36.885 31.4703 36.2112 31.0212L29.6779 26.6656L28.7115 26.0191V14.9805L29.6779 14.3339L36.2112 9.97838C36.8782 9.53602 37.7357 9.48838 38.4503 9.86949Z" fill="#F36518" />
                   </svg>
                 </div>
                 <div class="club-history__item-right">
-                  <h3 class="club-history__item-title title-h3">Занятия</h3>
-                  <div class="club-history__item-text">
+                  <h3 class="club-history__item-title title-h3 leading-[1.1] mb-2">
+                    Занятия
+                  </h3>
+                  <div class="club-history__item-text opacity-80 text-base font-normal leading-normal">
                     Проводят опытные преподаватели: до периода пандемии — в залах
                     берлинских центров, после — в удобном онлайн-формате.
                   </div>
                 </div>
               </li>
 
-              <li class="club-history__item">
-                <div class="club-history__item-left">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="29" viewBox="0 0 34 29" fill="none">
+              <li class="club-history__item bg-[#eeeeee] h-full flex items-center min-h-[140px] px-10 py-4 rounded-[20px] tablet:flex-col tablet:items-start tablet:px-4 tablet:py-6">
+                <div class="club-history__item-left flex-[0_0_36px] mr-[30px] tablet:mt-0 tablet:mb-4 tablet:mx-0">
+                  <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" width="34" height="29" viewBox="0 0 34 29" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9987 17.9998C33.217 16.8626 33.2168 16.8623 33.2165 16.862L31.9987 17.9998ZM33.2165 16.862L33.2074 16.8523L33.1854 16.8289L33.1052 16.7446C33.036 16.6723 32.9356 16.5683 32.8066 16.4372C32.5488 16.1751 32.1763 15.8041 31.7101 15.3603C30.7796 14.4746 29.4661 13.2901 27.9386 12.1012C26.4161 10.9164 24.6483 9.70149 22.8097 8.77658C20.9905 7.86139 18.978 7.1665 16.9987 7.1665C15.0194 7.1665 13.0069 7.86139 11.1877 8.77658C9.34912 9.70149 7.58127 10.9164 6.05882 12.1012C4.53129 13.2901 3.21778 14.4746 2.28728 15.3603C1.82105 15.8041 1.44856 16.1751 1.19078 16.4372C1.06183 16.5683 0.961426 16.6723 0.892183 16.7446L0.811963 16.8289L0.78996 16.8523L0.783589 16.8591L0.781575 16.8612C0.781301 16.8615 0.780347 16.8626 1.9987 17.9998L0.780347 16.8626C0.182593 17.5029 0.182593 18.4967 0.780347 19.1371C0.780073 19.1368 0.780347 19.1371 1.9987 17.9998L0.780347 19.1371L0.783589 19.1406L0.78996 19.1474L0.811963 19.1707L0.892183 19.255C0.961426 19.3274 1.06183 19.4314 1.19078 19.5625C1.44856 19.8245 1.82105 20.1956 2.28728 20.6394C3.21778 21.525 4.53129 22.7096 6.05882 23.8984C7.58127 25.0833 9.34912 26.2982 11.1877 27.2231C13.0069 28.1383 15.0194 28.8332 16.9987 28.8332C18.978 28.8332 20.9905 28.1383 22.8097 27.2231C24.6483 26.2982 26.4161 25.0833 27.9386 23.8984C29.4661 22.7096 30.7796 21.525 31.7101 20.6394C32.1763 20.1956 32.5488 19.8245 32.8066 19.5625C32.9356 19.4314 33.036 19.3274 33.1052 19.255L33.1854 19.1707L33.2074 19.1474L33.2158 19.1384C33.2161 19.1381 33.217 19.1371 31.9987 17.9998L33.217 19.1371C33.8148 18.4967 33.8143 17.5024 33.2165 16.862ZM13.6654 17.9998C13.6654 16.1589 15.1577 14.6665 16.9987 14.6665C18.8396 14.6665 20.332 16.1589 20.332 17.9998C20.332 19.8408 18.8396 21.3332 16.9987 21.3332C15.1577 21.3332 13.6654 19.8408 13.6654 17.9998ZM16.9987 11.3332C13.3168 11.3332 10.332 14.3179 10.332 17.9998C10.332 21.6817 13.3168 24.6665 16.9987 24.6665C20.6806 24.6665 23.6654 21.6817 23.6654 17.9998C23.6654 14.3179 20.6806 11.3332 16.9987 11.3332Z" fill="#F36518" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6654 0.5V5.5H15.332V0.5H18.6654Z" fill="#F36518" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.01132 3.48828L7.34465 6.82161L4.98763 9.17864L1.6543 5.8453L4.01132 3.48828Z" fill="#F36518" />
@@ -768,10 +784,10 @@
                   </svg>
                 </div>
                 <div class="club-history__item-right">
-                  <h3 class="club-history__item-title title-h3">
+                  <h3 class="club-history__item-title title-h3 leading-[1.1] mb-2">
                     Видение каббалистов
                   </h3>
-                  <div class="club-history__item-text">
+                  <div class="club-history__item-text opacity-80 text-base font-normal leading-normal">
                     Человечество неизбежно придёт к состоянию всеобщей любви и
                     единства. Центр Каббалы открыт для всех, кто стремится к этому
                     пути.
@@ -779,37 +795,37 @@
                 </div>
               </li>
 
-              <li class="club-history__item">
-                <div class="club-history__item-left">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" viewBox="0 0 30 35" fill="none">
+              <li class="club-history__item bg-[#eeeeee] h-full flex items-center min-h-[140px] px-10 py-4 rounded-[20px] tablet:flex-col tablet:items-start tablet:px-4 tablet:py-6">
+                <div class="club-history__item-left flex-[0_0_36px] mr-[30px] tablet:mt-0 tablet:mb-4 tablet:mx-0">
+                  <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" width="30" height="35" viewBox="0 0 30 35" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7717 3.96032C8.93423 1.87838 11.8688 0.833496 14.9987 0.833496C18.1286 0.833496 21.0632 1.87838 23.2257 3.96032C25.4011 6.05466 26.6654 9.07379 26.6654 12.7633C26.6654 15.544 25.2389 18.5581 23.6356 21.1256C21.9935 23.7553 19.9848 26.1956 18.481 27.89C16.612 29.9959 13.3854 29.9959 11.5164 27.89C10.0126 26.1956 8.00393 23.7553 6.36179 21.1256C4.75848 18.5581 3.33203 15.544 3.33203 12.7633C3.33203 9.07379 4.59629 6.05466 6.7717 3.96032ZM13.332 10.8335C13.332 9.91302 14.0782 9.16683 14.9987 9.16683C15.9192 9.16683 16.6654 9.91302 16.6654 10.8335C16.6654 11.754 15.9192 12.5002 14.9987 12.5002C14.0782 12.5002 13.332 11.754 13.332 10.8335ZM14.9987 5.8335C12.2373 5.8335 9.9987 8.07207 9.9987 10.8335C9.9987 13.5949 12.2373 15.8335 14.9987 15.8335C17.7601 15.8335 19.9987 13.5949 19.9987 10.8335C19.9987 8.07207 17.7601 5.8335 14.9987 5.8335Z" fill="#F36518" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3875 28.3338C3.40539 28.3133 3.42753 28.2895 3.45478 28.2625C3.66327 28.0559 4.05467 27.784 4.69127 27.4943C5.95657 26.9185 7.85991 26.4201 10.2092 26.1229L9.79084 22.8159C7.2537 23.1369 4.99038 23.696 3.31061 24.4604C2.47468 24.8408 1.69894 25.3097 1.10843 25.8949C0.512954 26.485 0 27.3071 0 28.3332C0 29.6856 0.873902 30.6674 1.72407 31.2955C2.60686 31.9478 3.77775 32.465 5.07478 32.8703C7.68871 33.6871 11.1975 34.1665 15 34.1665C18.8025 34.1665 22.3113 33.6871 24.9252 32.8703C26.2222 32.465 27.3931 31.9478 28.2759 31.2955C29.1261 30.6674 30 29.6856 30 28.3332C30 27.3071 29.487 26.485 28.8916 25.8949C28.3011 25.3097 27.5253 24.8408 26.6894 24.4604C25.0096 23.696 22.7463 23.1369 20.2092 22.8159L19.7908 26.1229C22.1401 26.4201 24.0434 26.9185 25.3087 27.4943C25.9453 27.784 26.3367 28.0559 26.5452 28.2625C26.5725 28.2895 26.5946 28.3133 26.6125 28.3338C26.5573 28.3979 26.4607 28.4922 26.2951 28.6146C25.8285 28.9593 25.0468 29.34 23.931 29.6887C21.7192 30.3799 18.5613 30.8332 15 30.8332C11.4387 30.8332 8.28083 30.3799 6.06903 29.6887C4.95321 29.34 4.17148 28.9593 3.70486 28.6146C3.5393 28.4922 3.44268 28.3979 3.3875 28.3338ZM3.317 28.4326C3.31678 28.4326 3.31771 28.43 3.32047 28.4248C3.3186 28.43 3.31722 28.4326 3.317 28.4326ZM26.683 28.4326C26.6828 28.4326 26.6814 28.43 26.6795 28.4248C26.6823 28.43 26.6832 28.4326 26.683 28.4326ZM26.6782 28.2419C26.6799 28.2369 26.6811 28.2345 26.6813 28.2345C26.6815 28.2345 26.6806 28.237 26.6782 28.2419ZM3.32176 28.2419C3.31936 28.237 3.31854 28.2345 3.31873 28.2345C3.31892 28.2345 3.32012 28.2369 3.32176 28.2419Z" fill="#F36518" />
                   </svg>
                 </div>
                 <div class="club-history__item-right">
-                  <h3 class="club-history__item-title title-h3">
+                  <h3 class="club-history__item-title title-h3 leading-[1.1] mb-2">
                     Международная деятельность
                   </h3>
-                  <div class="club-history__item-text">
+                  <div class="club-history__item-text opacity-80 text-base font-normal leading-normal">
                     Организация конгрессов по Каббале (2008, 2011) и тура д-ра М.
                     Лайтмана по Германии, включая визит в Берлин (2019).
                   </div>
                 </div>
               </li>
 
-              <li class="club-history__item">
-                <div class="club-history__item-left">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="35" viewBox="0 0 38 35" fill="none">
+              <li class="club-history__item bg-[#eeeeee] h-full flex items-center min-h-[140px] px-10 py-4 rounded-[20px] tablet:flex-col tablet:items-start tablet:px-4 tablet:py-6">
+                <div class="club-history__item-left flex-[0_0_36px] mr-[30px] tablet:mt-0 tablet:mb-4 tablet:mx-0">
+                  <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" width="38" height="35" viewBox="0 0 38 35" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.666 5.8335C10.666 3.07207 12.9046 0.833496 15.666 0.833496H22.3327C25.0941 0.833496 27.3327 3.07207 27.3327 5.8335V7.50016C27.3327 8.42064 26.5865 9.16683 25.666 9.16683H12.3327C11.4122 9.16683 10.666 8.42064 10.666 7.50016V5.8335ZM15.666 4.16683C14.7455 4.16683 13.9993 4.91302 13.9993 5.8335H23.9993C23.9993 4.91302 23.2532 4.16683 22.3327 4.16683H15.666Z" fill="#F36518" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666016 10.8335C0.666016 8.07207 2.90459 5.8335 5.66602 5.8335H32.3327C35.0941 5.8335 37.3327 8.07207 37.3327 10.8335V29.1668C37.3327 31.9283 35.0941 34.1668 32.3327 34.1668H5.66602C2.90459 34.1668 0.666016 31.9283 0.666016 29.1668V10.8335ZM5.66602 9.16683C4.74554 9.16683 3.99935 9.91302 3.99935 10.8335V29.1668C3.99935 30.0873 4.74554 30.8335 5.66602 30.8335H32.3327C33.2532 30.8335 33.9993 30.0873 33.9993 29.1668V10.8335C33.9993 9.91302 33.2532 9.16683 32.3327 9.16683H5.66602Z" fill="#F36518" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66602 5.8335C2.90459 5.8335 0.666016 8.07207 0.666016 10.8335V15.8335C0.666016 16.5695 1.1488 17.2184 1.85377 17.4299L18.5204 22.4299C18.8328 22.5236 19.1659 22.5236 19.4783 22.4299L36.1449 17.4299C36.8499 17.2184 37.3327 16.5695 37.3327 15.8335V10.8335C37.3327 8.07207 35.0941 5.8335 32.3327 5.8335H5.66602ZM17.3327 24.1668V17.5002H20.666V24.1668H17.3327Z" fill="#F36518" />
                   </svg>
                 </div>
                 <div class="club-history__item-right">
-                  <h3 class="club-history__item-title title-h3">
+                  <h3 class="club-history__item-title title-h3 leading-[1.1] mb-2">
                     Практическая работа
                   </h3>
-                  <div class="club-history__item-text">
+                  <div class="club-history__item-text opacity-80 text-base font-normal leading-normal">
                     Семинары, дискуссии, проекты — всё направлено на то, чтобы
                     приблизиться к духовности в её подлинном понимании.
                   </div>
@@ -822,26 +838,30 @@
     </section>
 
 
-    <section class="custom-scroll-section">
+    <section class="custom-scroll-section relative px-0 py-9 tablet:px-0 tablet:py-5">
 
-      <section id="text-img-s1-1" class="text-img-style-1" style="padding-top: 30px; padding-bottom: 0">
+      <section id="text-img-s1-1" class="text-img-style-1 mx-0 my-4 px-4 py-0" style="padding-top: 30px; padding-bottom: 0">
 
-        <h2 class="text-img-style-1__main-title title-h2">О каббалисте Михаэле Лайтмане</h2>
+        <h2 class="text-img-style-1__main-title title-h2 text-center mb-4">
+          О каббалисте Михаэле Лайтмане
+        </h2>
 
 
-        <div class="text-img-style-1__wrapper" style="background-color: #f5f5f5">
+        <div class="text-img-style-1__wrapper rounded-[20px]" style="background-color: #f5f5f5">
           <div class="text-img-style-1__wrap container">
-            <div class="text-img-style-1__inner">
-              <div class="text-img-style-1__inner-content">
-                <div class="text-img-style-1__inner-content-wrap">
-                  <h3 class="text-img-style-1__title title-h3">Основатель "Бней Барух"</h3>
-                  <div class="text-img-style-1__text">
+            <div class="text-img-style-1__inner flex items-center px-0 py-4 tablet:flex-col tablet:px-0 tablet:py-6">
+              <div class="text-img-style-1__inner-content flex-[0_0_40%] px-10 tablet:flex-[unset] tablet:mb-4 tablet:px-0">
+                <div class="text-img-style-1__inner-content-wrap max-w-[400px] rounded-[20px]">
+                  <h3 class="text-img-style-1__title title-h3 text-[28px] mb-4 tablet:text-2xl">
+                    Основатель "Бней Барух"
+                  </h3>
+                  <div class="text-img-style-1__text text-lg font-normal leading-normal opacity-80 tablet:text-base">
                     <p>Основатель и руководитель Международной академии каббалы "Бней Барух"</p>
                   </div>
                 </div>
               </div>
-              <div class="text-img-style-1__inner-image">
-                <img class="text-img-style-1__img" src="img/Основатель-Бней-Барух.jpg" alt="Основатель " Бней Барух"" />
+              <div class="text-img-style-1__inner-image flex-[0_0_60%] h-[400px] tablet:flex-[unset] tablet:h-[min(32vh,700px)]">
+                <img class="text-img-style-1__img w-full h-full object-cover rounded-[20px]" src="img/Основатель-Бней-Барух.jpg" alt="Основатель " Бней Барух"" />
               </div>
             </div>
           </div>
@@ -849,22 +869,24 @@
       </section>
 
 
-      <section id="text-img-s1-4" class="text-img-style-1" style="padding-top: 0; padding-bottom: 0">
+      <section id="text-img-s1-4" class="text-img-style-1 mx-0 my-4 px-4 py-0" style="padding-top: 0; padding-bottom: 0">
 
 
-        <div class="text-img-style-1__wrapper" style="background-color: #E5F6F2">
+        <div class="text-img-style-1__wrapper rounded-[20px]" style="background-color: #E5F6F2">
           <div class="text-img-style-1__wrap container">
-            <div class="text-img-style-1__inner">
-              <div class="text-img-style-1__inner-content">
-                <div class="text-img-style-1__inner-content-wrap">
-                  <h3 class="text-img-style-1__title title-h3">Путь учителя</h3>
-                  <div class="text-img-style-1__text">
+            <div class="text-img-style-1__inner flex items-center px-0 py-4 tablet:flex-col tablet:px-0 tablet:py-6">
+              <div class="text-img-style-1__inner-content flex-[0_0_40%] px-10 tablet:flex-[unset] tablet:mb-4 tablet:px-0">
+                <div class="text-img-style-1__inner-content-wrap max-w-[400px] rounded-[20px]">
+                  <h3 class="text-img-style-1__title title-h3 text-[28px] mb-4 tablet:text-2xl">
+                    Путь учителя
+                  </h3>
+                  <div class="text-img-style-1__text text-lg font-normal leading-normal opacity-80 tablet:text-base">
                     <p>Он изучает и преподает каббалу более 45 лет.</p>
                   </div>
                 </div>
               </div>
-              <div class="text-img-style-1__inner-image">
-                <img class="text-img-style-1__img" src="img/Путь-учителя.jpg" alt="Путь учителя" />
+              <div class="text-img-style-1__inner-image flex-[0_0_60%] h-[400px] tablet:flex-[unset] tablet:h-[min(32vh,700px)]">
+                <img class="text-img-style-1__img w-full h-full object-cover rounded-[20px]" src="img/Путь-учителя.jpg" alt="Путь учителя" />
               </div>
             </div>
           </div>
@@ -872,22 +894,24 @@
       </section>
 
 
-      <section id="text-img-s1-2" class="text-img-style-1" style="padding-top: 0; padding-bottom: 0">
+      <section id="text-img-s1-2" class="text-img-style-1 mx-0 my-4 px-4 py-0" style="padding-top: 0; padding-bottom: 0">
 
 
-        <div class="text-img-style-1__wrapper" style="background-color: #F8F4E3">
+        <div class="text-img-style-1__wrapper rounded-[20px]" style="background-color: #F8F4E3">
           <div class="text-img-style-1__wrap container">
-            <div class="text-img-style-1__inner">
-              <div class="text-img-style-1__inner-content">
-                <div class="text-img-style-1__inner-content-wrap">
-                  <h3 class="text-img-style-1__title title-h3">Жизнь в Израиле</h3>
-                  <div class="text-img-style-1__text">
+            <div class="text-img-style-1__inner flex items-center px-0 py-4 tablet:flex-col tablet:px-0 tablet:py-6">
+              <div class="text-img-style-1__inner-content flex-[0_0_40%] px-10 tablet:flex-[unset] tablet:mb-4 tablet:px-0">
+                <div class="text-img-style-1__inner-content-wrap max-w-[400px] rounded-[20px]">
+                  <h3 class="text-img-style-1__title title-h3 text-[28px] mb-4 tablet:text-2xl">
+                    Жизнь в Израиле
+                  </h3>
+                  <div class="text-img-style-1__text text-lg font-normal leading-normal opacity-80 tablet:text-base">
                     <p>Mихаэль Лайтман родился в Витебске (СССР, ныне Беларусь) в 1946 году. В 1974 году он переехал в Израиль, где открыл для себя каббалу.</p>
                   </div>
                 </div>
               </div>
-              <div class="text-img-style-1__inner-image">
-                <img class="text-img-style-1__img" src="img/Жизнь-в-Израиле.jpg" alt="Жизнь в Израиле" />
+              <div class="text-img-style-1__inner-image flex-[0_0_60%] h-[400px] tablet:flex-[unset] tablet:h-[min(32vh,700px)]">
+                <img class="text-img-style-1__img w-full h-full object-cover rounded-[20px]" src="img/Жизнь-в-Израиле.jpg" alt="Жизнь в Израиле" />
               </div>
             </div>
           </div>
@@ -895,22 +919,24 @@
       </section>
 
 
-      <section id="text-img-s1-3" class="text-img-style-1" style="padding-top: 0; padding-bottom: 0">
+      <section id="text-img-s1-3" class="text-img-style-1 mx-0 my-4 px-4 py-0" style="padding-top: 0; padding-bottom: 0">
 
 
-        <div class="text-img-style-1__wrapper" style="background-color: #E5EEF6">
+        <div class="text-img-style-1__wrapper rounded-[20px]" style="background-color: #E5EEF6">
           <div class="text-img-style-1__wrap container">
-            <div class="text-img-style-1__inner">
-              <div class="text-img-style-1__inner-content">
-                <div class="text-img-style-1__inner-content-wrap">
-                  <h3 class="text-img-style-1__title title-h3">Ученик Ашлага</h3>
-                  <div class="text-img-style-1__text">
+            <div class="text-img-style-1__inner flex items-center px-0 py-4 tablet:flex-col tablet:px-0 tablet:py-6">
+              <div class="text-img-style-1__inner-content flex-[0_0_40%] px-10 tablet:flex-[unset] tablet:mb-4 tablet:px-0">
+                <div class="text-img-style-1__inner-content-wrap max-w-[400px] rounded-[20px]">
+                  <h3 class="text-img-style-1__title title-h3 text-[28px] mb-4 tablet:text-2xl">
+                    Ученик Ашлага
+                  </h3>
+                  <div class="text-img-style-1__text text-lg font-normal leading-normal opacity-80 tablet:text-base">
                     <p>Он был учеником и личным помощником каббалиста рава Баруха Шалом а-Леви Ашлага (1906–1991), старшего сына и преемника каббалиста рава Йегуды Лейб а-Леви Ашлага (1884–1954), известного как Бааль Сулам за его комментарий «Сулам» ("Лестница") на книгу "Зоар".</p>
                   </div>
                 </div>
               </div>
-              <div class="text-img-style-1__inner-image">
-                <img class="text-img-style-1__img" src="img/Ученик-Ашлага.jpg" alt="Ученик Ашлага" />
+              <div class="text-img-style-1__inner-image flex-[0_0_60%] h-[400px] tablet:flex-[unset] tablet:h-[min(32vh,700px)]">
+                <img class="text-img-style-1__img w-full h-full object-cover rounded-[20px]" src="img/Ученик-Ашлага.jpg" alt="Ученик Ашлага" />
               </div>
             </div>
           </div>
@@ -922,98 +948,100 @@
 
     </section>
 
-    <section id="quote-1" class="quote">
-      <div class="quote__wrapper">
-        <div class="quote__inner container">
-          <div class="quote__text">
+    <section id="quote-1" class="quote mx-0 my-4">
+      <div class="quote__wrapper relative">
+        <div class="quote__inner container relative p-[120px] tablet:px-4 tablet:py-[110px]">
+          <div class="quote__text text-center text-4xl italic font-semibold leading-[1.2] tablet:text-3xl">
             <p>Изучая Каббалу, человек начинает жить по-настоящему. Каждый день для него новый. Он постоянно открывает новые законы, связи, новый мир внутри себя и вокруг себя.</p>
           </div>
-          <div class="quote__author">Доктор Михаэль Лайтман</div>
+          <div class="quote__author text-center text-[32px] font-normal leading-[1.2] opacity-80 mt-[60px] tablet:text-2xl tablet:mt-[55px]">
+            Доктор Михаэль Лайтман
+          </div>
         </div>
       </div>
     </section>
 
 
-    <section id="sections-kabbalah-1" class="sections-kabbalah">
-      <div class="sections-kabbalah__wrapper">
+    <section id="sections-kabbalah-1" class="sections-kabbalah mx-0 my-4 px-4 py-0">
+      <div class="sections-kabbalah__wrapper bg-neutral-100 px-0 py-10 rounded-[20px]">
         <div class="sections-kabbalah__wrap container">
-          <h2 class="sections-kabbalah__title title-h2">Разделы в Каббале</h2>
-          <div class="sections-kabbalah__inner">
-            <ul class="sections-kabbalah__items">
+          <h2 class="sections-kabbalah__title title-h2 text-center mb-6">Разделы в Каббале</h2>
+          <div class="sections-kabbalah__inner max-w-[740px] mx-auto my-0">
+            <ul class="sections-kabbalah__items grid grid-cols-[1fr_1fr] gap-4 tablet:grid-cols-[1fr] tablet:gap-2.5">
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Творение. Создание. Функционирование. Управление. Цель.
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Методика и условия раскрытия Высшей управляющей силы.
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Кругоооборот душ
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Схема мироздания
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Свобода воли
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Язык Каббалы
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Книга Зоар
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Восприятие реальности
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Древо Жизни (Ари)
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Духовная работа человека
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Книга Создания (Сефер Иецира)
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Постижение высших миров
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Тайны вечной книги - Тора (Ветхий завет)
                 </a>
               </li>
               <li class="sections-kabbalah__item">
-                <a href="#" class="sections-kabbalah__link">
+                <a href="#" class="sections-kabbalah__link text-[#222222] text-base font-normal leading-normal min-h-[84px] flex items-center bg-[#e5eef6] transition-all duration-[0.2s] ease-[ease] p-4 rounded-[20px] tablet:min-h-[unset]">
                   Десять Сфирот. Учение о десяти сфирот.
                 </a>
               </li>
             </ul>
           </div>
 
-          <div class="sections-kabbalah__buttons">
+          <div class="sections-kabbalah__buttons flex items-center justify-center gap-4 flex-wrap mt-7">
 
             <a href="#" class="sections-kabbalah__btn btn btn--primary-dark">
               Принять участие
@@ -1030,12 +1058,12 @@
     </section>
 
 
-    <section id="featured-event-1" class="featured-event">
-      <div class="featured-event__wrapper" style="background-image: url(img/event-bg-cover.jpg)">
-        <div class="featured-event__wrap container">
-          <a href="#" class="featured-event__inner">
-            <div class="featured-event__inner-left">
-              <div class="featured-event__icon">
+    <section id="featured-event-1" class="featured-event mx-0 my-4 px-4 py-0">
+      <div class="featured-event__wrapper relative rounded-[20px]" style="background-image: url(img/event-bg-cover.jpg)">
+        <div class="featured-event__wrap container relative">
+          <a href="#" class="featured-event__inner flex items-center justify-between px-0 py-10 tablet:flex-col">
+            <div class="featured-event__inner-left flex tablet:flex-col">
+              <div class="featured-event__icon flex items-center justify-center w-[76px] h-[76px] bg-white transition-all duration-[0.2s] ease-[ease] mr-8 rounded-[50%] tablet:mb-10">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M23.334 7.91634C23.0038 7.91203 22.6884 7.77894 22.4549 7.54545C22.2214 7.31196 22.0883 6.99652 22.084 6.66634V3.33301C22.084 3.00149 22.2157 2.68354 22.4501 2.44912C22.6845 2.2147 23.0025 2.08301 23.334 2.08301C23.6655 2.08301 23.9834 2.2147 24.2179 2.44912C24.4523 2.68354 24.584 3.00149 24.584 3.33301V6.66634C24.5797 6.99652 24.4466 7.31196 24.2131 7.54545C23.9796 7.77894 23.6642 7.91203 23.334 7.91634Z" fill="#003B65" />
                   <path d="M30 7.91634C29.6698 7.91203 29.3544 7.77894 29.1209 7.54545C28.8874 7.31196 28.7543 6.99652 28.75 6.66634V3.33301C28.75 3.00149 28.8817 2.68354 29.1161 2.44912C29.3505 2.2147 29.6685 2.08301 30 2.08301C30.3315 2.08301 30.6495 2.2147 30.8839 2.44912C31.1183 2.68354 31.25 3.00149 31.25 3.33301V6.66634C31.2457 6.99652 31.1126 7.31196 30.8791 7.54545C30.6456 7.77894 30.3302 7.91203 30 7.91634Z" fill="#003B65" />
@@ -1046,9 +1074,9 @@
                 </svg>
 
               </div>
-              <div class="featured-event__text">
-                <span class="featured-event__label">ГЛАВНОЕ СОБЫТИЕ. 31 Октября 2025</span>
-                <h3 class="featured-event__title title-h3">
+              <div class="featured-event__text flex flex-col justify-between items-start px-0 py-1.5 tablet:p-0">
+                <span class="featured-event__label text-white text-center text-base font-normal leading-[1.3] uppercase transition-all duration-[0.2s] ease-[ease] tablet:mb-4">ГЛАВНОЕ СОБЫТИЕ. 31 Октября 2025</span>
+                <h3 class="featured-event__title title-h3 text-white transition-all duration-[0.2s] ease-[ease] flex items-center tablet:flex-col tablet:leading-normal tablet:items-start tablet:mb-10">
                   Не пропустите мероприятие. Основы Каббалы
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" viewBox="0 0 24 14" fill="none">
                     <path d="M15.2675 0.999959L21.2675 7M21.2675 7L15.2675 13M21.2675 7H1.26758" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -1057,23 +1085,23 @@
               </div>
             </div>
 
-            <div class="featured-event__inner-right">
-              <div class="countdown" data-year="2025" data-month="11" data-day="6" data-hour="19" data-minute="30" data-second="00">
-                <div class="countdown__item">
-                  <span class="countdown__item-top" id="days">00</span>
-                  <small class="countdown__item-bottom">Days</small>
+            <div class="featured-event__inner-right tablet:w-full">
+              <div class="countdown flex gap-5 tablet:gap-3 tablet:justify-center" data-year="2025" data-month="11" data-day="6" data-hour="19" data-minute="30" data-second="00">
+                <div class="countdown__item flex flex-col items-center justify-center w-20 transition-all duration-[0.2s] ease-[ease] rounded-lg border-2 border-solid border-[#e2f2ff] tablet:w-3/12 tablet:max-w-[100px]">
+                  <span class="countdown__item-top min-h-[56px] flex items-center justify-center w-full text-white text-center text-[28px] font-semibold leading-[1.3] tracking-[2.8px] uppercase transition-all duration-[0.2s] ease-[ease] border-b-2 border-b-[#e2f2ff] border-solid tablet:min-h-[50px] tablet:text-[22px]" id="days">00</span>
+                  <small class="countdown__item-bottom text-[#e2f2ff] text-center text-sm font-medium leading-normal min-h-[26px] flex items-center justify-center transition-all duration-[0.2s] ease-[ease] tablet:text-xs tablet:min-h-[22px]">Days</small>
                 </div>
-                <div class="countdown__item">
-                  <span class="countdown__item-top" id="hours">00</span>
-                  <small class="countdown__item-bottom">Hours</small>
+                <div class="countdown__item flex flex-col items-center justify-center w-20 transition-all duration-[0.2s] ease-[ease] rounded-lg border-2 border-solid border-[#e2f2ff] tablet:w-3/12 tablet:max-w-[100px]">
+                  <span class="countdown__item-top min-h-[56px] flex items-center justify-center w-full text-white text-center text-[28px] font-semibold leading-[1.3] tracking-[2.8px] uppercase transition-all duration-[0.2s] ease-[ease] border-b-2 border-b-[#e2f2ff] border-solid tablet:min-h-[50px] tablet:text-[22px]" id="hours">00</span>
+                  <small class="countdown__item-bottom text-[#e2f2ff] text-center text-sm font-medium leading-normal min-h-[26px] flex items-center justify-center transition-all duration-[0.2s] ease-[ease] tablet:text-xs tablet:min-h-[22px]">Hours</small>
                 </div>
-                <div class="countdown__item">
-                  <span class="countdown__item-top" id="minutes">00</span>
-                  <small class="countdown__item-bottom">Minutes</small>
+                <div class="countdown__item flex flex-col items-center justify-center w-20 transition-all duration-[0.2s] ease-[ease] rounded-lg border-2 border-solid border-[#e2f2ff] tablet:w-3/12 tablet:max-w-[100px]">
+                  <span class="countdown__item-top min-h-[56px] flex items-center justify-center w-full text-white text-center text-[28px] font-semibold leading-[1.3] tracking-[2.8px] uppercase transition-all duration-[0.2s] ease-[ease] border-b-2 border-b-[#e2f2ff] border-solid tablet:min-h-[50px] tablet:text-[22px]" id="minutes">00</span>
+                  <small class="countdown__item-bottom text-[#e2f2ff] text-center text-sm font-medium leading-normal min-h-[26px] flex items-center justify-center transition-all duration-[0.2s] ease-[ease] tablet:text-xs tablet:min-h-[22px]">Minutes</small>
                 </div>
-                <div class="countdown__item">
-                  <span class="countdown__item-top" id="seconds">00</span>
-                  <small class="countdown__item-bottom">Seconds</small>
+                <div class="countdown__item flex flex-col items-center justify-center w-20 transition-all duration-[0.2s] ease-[ease] rounded-lg border-2 border-solid border-[#e2f2ff] tablet:w-3/12 tablet:max-w-[100px]">
+                  <span class="countdown__item-top min-h-[56px] flex items-center justify-center w-full text-white text-center text-[28px] font-semibold leading-[1.3] tracking-[2.8px] uppercase transition-all duration-[0.2s] ease-[ease] border-b-2 border-b-[#e2f2ff] border-solid tablet:min-h-[50px] tablet:text-[22px]" id="seconds">00</span>
+                  <small class="countdown__item-bottom text-[#e2f2ff] text-center text-sm font-medium leading-normal min-h-[26px] flex items-center justify-center transition-all duration-[0.2s] ease-[ease] tablet:text-xs tablet:min-h-[22px]">Seconds</small>
                 </div>
               </div>
             </div>
@@ -1146,22 +1174,24 @@
 
 
 
-    <section id="text-img-s1-4" class="text-img-style-1" style="padding-top: 0; padding-bottom: 0">
+    <section id="text-img-s1-4" class="text-img-style-1 mx-0 my-4 px-4 py-0" style="padding-top: 0; padding-bottom: 0">
 
 
-      <div class="text-img-style-1__wrapper" style="background-color: #f5f5f5">
+      <div class="text-img-style-1__wrapper rounded-[20px]" style="background-color: #f5f5f5">
         <div class="text-img-style-1__wrap container">
-          <div class="text-img-style-1__inner">
-            <div class="text-img-style-1__inner-content">
-              <div class="text-img-style-1__inner-content-wrap">
-                <h3 class="text-img-style-1__title title-h3">Формат встреч</h3>
-                <div class="text-img-style-1__text">
+          <div class="text-img-style-1__inner flex items-center px-0 py-4 tablet:flex-col tablet:px-0 tablet:py-6">
+            <div class="text-img-style-1__inner-content flex-[0_0_40%] px-10 tablet:flex-[unset] tablet:mb-4 tablet:px-0">
+              <div class="text-img-style-1__inner-content-wrap max-w-[400px] rounded-[20px]">
+                <h3 class="text-img-style-1__title title-h3 text-[28px] mb-4 tablet:text-2xl">
+                  Формат встреч
+                </h3>
+                <div class="text-img-style-1__text text-lg font-normal leading-normal opacity-80 tablet:text-base">
                   <p>Участие в виртуальных и физических клубных встречах, где будет возможность - познакомиться с организаторами клуба, поговорить с опытными преподавателями, узнать побольше о оригинальных первоисточниках, пообщаться с участниками клуба, и получить ответы на все волнующие вас вопросы.</p>
                 </div>
               </div>
             </div>
-            <div class="text-img-style-1__inner-image">
-              <img class="text-img-style-1__img" src="img/формат-встреч.jpg" alt="Формат встреч" />
+            <div class="text-img-style-1__inner-image flex-[0_0_60%] h-[400px] tablet:flex-[unset] tablet:h-[min(32vh,700px)]">
+              <img class="text-img-style-1__img w-full h-full object-cover rounded-[20px]" src="img/Meeting-format.jpg" alt="Формат встреч" />
             </div>
           </div>
         </div>
@@ -1169,11 +1199,12 @@
     </section>
 
 
-    <section id="video-full-width-1" class="video-full-width">
-      <div class="video-full-width__wrapper">
+    <section id="video-full-width-1" class="video-full-width mx-0 my-4 px-4 py-0 s-phone:p-0">
+      <div class="video-full-width__wrapper bg-[#e5eef6] p-10 rounded-[20px] tablet:px-0 tablet:py-4 s-phone:bg-transparent s-phone:p-0">
         <div class="video-full-width__inner container">
-          <div class="video-full-width__video-wrap">
-            <iframe width="420" height="315" src="https://www.youtube.com/embed/4w5YJs8UCCU"> </iframe>
+          <div class="video-full-width__video-wrap flex max-h-[500px] items-center justify-center aspect-video mx-auto my-0 tablet:p-0">
+            <iframe class="w-full h-full rounded-[20px] border-[none]" width="420" height="315" src="https://www.youtube.com/embed/4w5YJs8UCCU">
+            </iframe>
           </div>
         </div>
       </div>
@@ -1182,15 +1213,15 @@
   </main>
 
   <footer class="footer" id="footer">
-    <div id="promo-section" class="promo-section">
-      <div class="promo-section__wrapper">
-        <div class="promo-section__inner container">
-          <div class="promo-section__left">
-            <div class="promo-section__left-content">
-              <h2 class="promo-section__title title-h2">Твой путь познакомиться</h2>
-              <span class="promo-section__label">С древней Тайной Мудрости</span>
+    <div id="promo-section" class="promo-section mx-0 my-4 px-4 py-0">
+      <div class="promo-section__wrapper bg-[#003b65] relative rounded-[20px]">
+        <div class="promo-section__inner container relative flex justify-between p-11 tablet:flex-col tablet:px-4 tablet:py-10">
+          <div class="promo-section__left flex-[0_0_50%] flex flex-col justify-between gap-6">
+            <div class="promo-section__left-content flex-[0_0_50%]">
+              <h2 class="promo-section__title title-h2 text-white mb-2.5 tablet:mb-1.5">Твой путь познакомиться</h2>
+              <span class="promo-section__label text-[#f36518] text-xl font-semibold leading-normal tablet:text-base">С древней Тайной Мудрости</span>
             </div>
-            <div class="promo-section__buttons">
+            <div class="promo-section__buttons flex flex-wrap gap-4 tablet:gap-2">
               <a class="promo-section__btn btn btn--primary-light" href="#">
                 Принять участие
               </a>
@@ -1200,26 +1231,26 @@
               </a>
             </div>
           </div>
-          <div class="promo-section__right">
-            <span class="promo-section__items-title title-h3">Мы будем:</span>
+          <div class="promo-section__right min-w-[480px] desktop:min-w-[unset] tablet:mt-[70px]">
+            <span class="promo-section__items-title title-h3 text-white font-medium block mb-5 tablet:text-lg tablet:mb-3">Мы будем:</span>
             <ul class="promo-section__items">
               <li class="promo-section__item">
-                <a class="promo-section__item-link">
+                <a class="promo-section__item-link flex items-center text-white text-xl font-normal leading-normal transition-all duration-[0.2s] ease-[ease] tablet:text-base">
                   Знакомить вас с первоисточниками
                 </a>
               </li>
               <li class="promo-section__item">
-                <a class="promo-section__item-link">
+                <a class="promo-section__item-link flex items-center text-white text-xl font-normal leading-normal transition-all duration-[0.2s] ease-[ease] tablet:text-base">
                   Знакомить вас с историей
                 </a>
               </li>
               <li class="promo-section__item">
-                <a class="promo-section__item-link">
+                <a class="promo-section__item-link flex items-center text-white text-xl font-normal leading-normal transition-all duration-[0.2s] ease-[ease] tablet:text-base">
                   Знакомить вас с людьми
                 </a>
               </li>
               <li class="promo-section__item">
-                <a class="promo-section__item-link">
+                <a class="promo-section__item-link flex items-center text-white text-xl font-normal leading-normal transition-all duration-[0.2s] ease-[ease] tablet:text-base">
                   Знакомить вас с Каббалой
                 </a>
               </li>
@@ -1232,7 +1263,7 @@
 
 
 
-    <p class="footer__copyright">
+    <p class="footer__copyright text-center opacity-60 text-sm not-italic font-normal mx-0 my-4 pt-0 pb-4 px-4">
       © Copyright - Bnei Baruch Kabbalah Academy in Europe
     </p>
   </footer>

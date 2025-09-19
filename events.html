@@ -21,49 +21,49 @@
   <meta name="twitter:image" content="img/og-image.jpg">
 
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/tailwind.min.css">
   <link rel="stylesheet" href="css/main.min.css">
-  <link rel="stylesheet" href="css/section-hero-banner.min.css">
-  <link rel="stylesheet" href="css/section-events.min.css" />
-  <link rel="stylesheet" href="css/section-featured-event.min.css" />
-  <link rel="stylesheet" href="css/page-events.min.css" />
+
+  <link rel="stylesheet" href="css/events.min.css" />
+
 </head>
 
 <body>
 
   <script src="js/libs.min.js"></script>
 
-  <header class="header" id="header">
+  <header class="header bg-[#eeeeee] fixed z-[999] w-full border-b-[#003b65] border-b border-solid left-0 top-0" id="header">
     <div class="header__wrap container">
-      <div class="header__inner">
+      <div class="header__inner backdrop-blur-sm flex justify-between items-center relative px-0 py-4 tablet:px-0 tablet:py-3.5">
         <div class="header__inner-left">
-          <a class="header__logo-link" href="/">
-            <img class="header__logo-img" loading="lazy" src="img/BNEIBARUCH-logo.svg" alt="BNEIBARUCH KABBALAH ACADEMY" width="300" height="50">
+          <a class="header__logo-link block w-[220px] tablet:w-[150px]" href="/">
+            <img class="header__logo-img w-full h-full object-contain" loading="lazy" src="img/BNEIBARUCH-logo.svg" alt="BNEIBARUCH KABBALAH ACADEMY" width="300" height="50">
           </a>
         </div>
-        <div class="header__inner-right">
-          <ul class="header__menu-items">
-            <li class="header__menu-item">
-              <a class="header__menu-item-link" href="#">
+        <div class="header__inner-right flex items-center gap-9 tablet:justify-end tablet:gap-3.5">
+          <ul class="header__menu-items flex items-center gap-8 tablet:absolute tablet:w-screen tablet:max-h-[60vh] tablet:overflow-y-scroll tablet:bg-[#eeeeee] tablet:flex-col tablet:gap-0 tablet:p-4 tablet:border-b-[#003b65] tablet:border-b tablet:border-solid tablet:-left-4 tablet:top-[60px]">
+            <li class="header__menu-item tablet:w-full">
+              <a class="header__menu-item-link text-[#222222] hover:text-[#f36518] text-base font-medium leading-[1.3] tablet:w-full tablet:block tablet:text-center tablet:px-0 tablet:py-4" href="#">
                 События
               </a>
             </li>
-            <li class="header__menu-item">
-              <a class="header__menu-item-link" href="#">
+            <li class="header__menu-item tablet:w-full">
+              <a class="header__menu-item-link text-[#222222] hover:text-[#f36518] text-base font-medium leading-[1.3] tablet:w-full tablet:block tablet:text-center tablet:px-0 tablet:py-4" href="#">
                 О нас
               </a>
             </li>
-            <li class="header__menu-item">
-              <a class="header__menu-item-link" href="#">
+            <li class="header__menu-item tablet:w-full">
+              <a class="header__menu-item-link text-[#222222] hover:text-[#f36518] text-base font-medium leading-[1.3] tablet:w-full tablet:block tablet:text-center tablet:px-0 tablet:py-4" href="#">
                 О Каббале
               </a>
             </li>
           </ul>
 
-          <button class="header__language">
+          <button class="header__language inline-flex items-center bg-transparent m-0 p-0.5 rounded-[unset] border-[unset]">
             <span class="visually-hidden">
               Выберите язык
             </span>
-            <svg class="header__language-arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <svg class="header__language-arrow mr-2 tablet:mr-1" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
               <g opacity="0.5">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.85149 7.6018C5.20947 7.24382 5.78988 7.24382 6.14786 7.6018L10.9997 12.4536L15.8515 7.6018C16.2095 7.24382 16.7899 7.24382 17.1479 7.6018C17.5058 7.95978 17.5058 8.54018 17.1479 8.89816L10.9997 15.0463L4.85149 8.89816C4.49351 8.54018 4.49351 7.95978 4.85149 7.6018Z" fill="#003B65" />
               </g>
@@ -74,7 +74,7 @@
             </svg>
           </button>
 
-          <button class="header__menu-burder">
+          <button class="header__menu-burder bg-transparent hidden m-0 p-0 border-[unset] tablet:flex">
             <span class="visually-hidden">Открыть меню</span>
             <svg class="open-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="22" viewBox="0 0 27 22" fill="none">
               <rect width="27" height="2" fill="#003B65" />
@@ -91,31 +91,33 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="mt-20 tablet:mt-[60px]">
 
     <style>
-      #events-hero-banner {
+      #events-hero-banner.hero-banner {
         background-image: url(img/events-hero-banner.jpg);
       }
 
       @media only screen and (max-width: 769px) {
-        #events-hero-banner {
+        #events-hero-banner.hero-banner {
           background-image: url(img/events-hero-banner-mobile.jpg);
         }
       }
     </style>
 
-    <section id="events-hero-banner" class="hero-banner">
+    <section id="events-hero-banner" class="hero-banner bg-no-repeat bg-cover bg-center flex flex-col justify-end mb-4 relative">
       <div class="hero-banner__wrap container">
-        <div class="hero-banner__inner">
-          <h1 class="hero-banner__title title-h1">События</h1>
-          <span class="hero-banner__label"><strong>Место, где знания становятся личным опытом</strong></span>
-          <div class="hero-banner__text">
+        <div class="hero-banner__inner relative max-w-[775px] px-[38px] py-12 tablet:px-0 tablet:py-10">
+          <h1 class="hero-banner__title title-h1 text-white mb-6 tablet:mb-4">
+            События
+          </h1>
+          <span class="hero-banner__label text-[#f36518] text-xl font-semibold leading-normal mb-1 tablet:text-base tablet:mb-1"><strong>Место, где знания становятся личным опытом</strong></span>
+          <div class="hero-banner__text text-white text-xl font-normal leading-normal tablet:text-base">
             <p>Пространство общения и совместного изучения каббалы с преподавателями и сообществом.</p>
           </div>
 
-          <div class="hero-banner__btns-wrapper">
-            <div class="hero-banner__btns-wrap">
+          <div class="hero-banner__btns-wrapper w-fit">
+            <div class="hero-banner__btns-wrap w-fit flex gap-9 flex-wrap mt-14 tablet:gap-2 tablet:mt-8">
 
               <a class="hero-banner__btn btn btn--secondary-light" href="#">
                 Принять участие <svg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -138,7 +140,9 @@
 
             </div>
 
-            <div class="hero-banner__btn-subtitle">Получите уведомление и приглашение на еженедельную вирт.встречу клуба через WhatsApp</div>
+            <div class="hero-banner__btn-subtitle text-white text-xs mt-1 font-semibold leading-[1.1]">
+              Получите уведомление и приглашение на еженедельную вирт.встречу клуба через WhatsApp
+            </div>
 
           </div>
         </div>
@@ -146,12 +150,12 @@
     </section>
 
 
-    <section id="featured-event-1" class="featured-event">
-      <div class="featured-event__wrapper" style="background-image: url(img/event-bg-cover.jpg)">
-        <div class="featured-event__wrap container">
-          <a href="#" class="featured-event__inner">
-            <div class="featured-event__inner-left">
-              <div class="featured-event__icon">
+    <section id="featured-event-1" class="featured-event mx-0 my-4 px-4 py-0">
+      <div class="featured-event__wrapper relative rounded-[20px]" style="background-image: url(img/event-bg-cover.jpg)">
+        <div class="featured-event__wrap container relative">
+          <a href="#" class="featured-event__inner flex items-center justify-between px-0 py-10 tablet:flex-col">
+            <div class="featured-event__inner-left flex tablet:flex-col">
+              <div class="featured-event__icon flex items-center justify-center w-[76px] h-[76px] bg-white transition-all duration-[0.2s] ease-[ease] mr-8 rounded-[50%] tablet:mb-10">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M23.334 7.91634C23.0038 7.91203 22.6884 7.77894 22.4549 7.54545C22.2214 7.31196 22.0883 6.99652 22.084 6.66634V3.33301C22.084 3.00149 22.2157 2.68354 22.4501 2.44912C22.6845 2.2147 23.0025 2.08301 23.334 2.08301C23.6655 2.08301 23.9834 2.2147 24.2179 2.44912C24.4523 2.68354 24.584 3.00149 24.584 3.33301V6.66634C24.5797 6.99652 24.4466 7.31196 24.2131 7.54545C23.9796 7.77894 23.6642 7.91203 23.334 7.91634Z" fill="#003B65" />
                   <path d="M30 7.91634C29.6698 7.91203 29.3544 7.77894 29.1209 7.54545C28.8874 7.31196 28.7543 6.99652 28.75 6.66634V3.33301C28.75 3.00149 28.8817 2.68354 29.1161 2.44912C29.3505 2.2147 29.6685 2.08301 30 2.08301C30.3315 2.08301 30.6495 2.2147 30.8839 2.44912C31.1183 2.68354 31.25 3.00149 31.25 3.33301V6.66634C31.2457 6.99652 31.1126 7.31196 30.8791 7.54545C30.6456 7.77894 30.3302 7.91203 30 7.91634Z" fill="#003B65" />
@@ -162,9 +166,9 @@
                 </svg>
 
               </div>
-              <div class="featured-event__text">
-                <span class="featured-event__label">ГЛАВНОЕ СОБЫТИЕ. 31 Октября 2025</span>
-                <h3 class="featured-event__title title-h3">
+              <div class="featured-event__text flex flex-col justify-between items-start px-0 py-1.5 tablet:p-0">
+                <span class="featured-event__label text-white text-center text-base font-normal leading-[1.3] uppercase transition-all duration-[0.2s] ease-[ease] tablet:mb-4">ГЛАВНОЕ СОБЫТИЕ. 31 Октября 2025</span>
+                <h3 class="featured-event__title title-h3 text-white transition-all duration-[0.2s] ease-[ease] flex items-center tablet:flex-col tablet:leading-normal tablet:items-start tablet:mb-10">
                   Не пропустите мероприятие. Основы Каббалы
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" viewBox="0 0 24 14" fill="none">
                     <path d="M15.2675 0.999959L21.2675 7M21.2675 7L15.2675 13M21.2675 7H1.26758" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -173,23 +177,23 @@
               </div>
             </div>
 
-            <div class="featured-event__inner-right">
-              <div class="countdown" data-year="2025" data-month="11" data-day="6" data-hour="19" data-minute="30" data-second="00">
-                <div class="countdown__item">
-                  <span class="countdown__item-top" id="days">00</span>
-                  <small class="countdown__item-bottom">Days</small>
+            <div class="featured-event__inner-right tablet:w-full">
+              <div class="countdown flex gap-5 tablet:gap-3 tablet:justify-center" data-year="2025" data-month="11" data-day="6" data-hour="19" data-minute="30" data-second="00">
+                <div class="countdown__item flex flex-col items-center justify-center w-20 transition-all duration-[0.2s] ease-[ease] rounded-lg border-2 border-solid border-[#e2f2ff] tablet:w-3/12 tablet:max-w-[100px]">
+                  <span class="countdown__item-top min-h-[56px] flex items-center justify-center w-full text-white text-center text-[28px] font-semibold leading-[1.3] tracking-[2.8px] uppercase transition-all duration-[0.2s] ease-[ease] border-b-2 border-b-[#e2f2ff] border-solid tablet:min-h-[50px] tablet:text-[22px]" id="days">00</span>
+                  <small class="countdown__item-bottom text-[#e2f2ff] text-center text-sm font-medium leading-normal min-h-[26px] flex items-center justify-center transition-all duration-[0.2s] ease-[ease] tablet:text-xs tablet:min-h-[22px]">Days</small>
                 </div>
-                <div class="countdown__item">
-                  <span class="countdown__item-top" id="hours">00</span>
-                  <small class="countdown__item-bottom">Hours</small>
+                <div class="countdown__item flex flex-col items-center justify-center w-20 transition-all duration-[0.2s] ease-[ease] rounded-lg border-2 border-solid border-[#e2f2ff] tablet:w-3/12 tablet:max-w-[100px]">
+                  <span class="countdown__item-top min-h-[56px] flex items-center justify-center w-full text-white text-center text-[28px] font-semibold leading-[1.3] tracking-[2.8px] uppercase transition-all duration-[0.2s] ease-[ease] border-b-2 border-b-[#e2f2ff] border-solid tablet:min-h-[50px] tablet:text-[22px]" id="hours">00</span>
+                  <small class="countdown__item-bottom text-[#e2f2ff] text-center text-sm font-medium leading-normal min-h-[26px] flex items-center justify-center transition-all duration-[0.2s] ease-[ease] tablet:text-xs tablet:min-h-[22px]">Hours</small>
                 </div>
-                <div class="countdown__item">
-                  <span class="countdown__item-top" id="minutes">00</span>
-                  <small class="countdown__item-bottom">Minutes</small>
+                <div class="countdown__item flex flex-col items-center justify-center w-20 transition-all duration-[0.2s] ease-[ease] rounded-lg border-2 border-solid border-[#e2f2ff] tablet:w-3/12 tablet:max-w-[100px]">
+                  <span class="countdown__item-top min-h-[56px] flex items-center justify-center w-full text-white text-center text-[28px] font-semibold leading-[1.3] tracking-[2.8px] uppercase transition-all duration-[0.2s] ease-[ease] border-b-2 border-b-[#e2f2ff] border-solid tablet:min-h-[50px] tablet:text-[22px]" id="minutes">00</span>
+                  <small class="countdown__item-bottom text-[#e2f2ff] text-center text-sm font-medium leading-normal min-h-[26px] flex items-center justify-center transition-all duration-[0.2s] ease-[ease] tablet:text-xs tablet:min-h-[22px]">Minutes</small>
                 </div>
-                <div class="countdown__item">
-                  <span class="countdown__item-top" id="seconds">00</span>
-                  <small class="countdown__item-bottom">Seconds</small>
+                <div class="countdown__item flex flex-col items-center justify-center w-20 transition-all duration-[0.2s] ease-[ease] rounded-lg border-2 border-solid border-[#e2f2ff] tablet:w-3/12 tablet:max-w-[100px]">
+                  <span class="countdown__item-top min-h-[56px] flex items-center justify-center w-full text-white text-center text-[28px] font-semibold leading-[1.3] tracking-[2.8px] uppercase transition-all duration-[0.2s] ease-[ease] border-b-2 border-b-[#e2f2ff] border-solid tablet:min-h-[50px] tablet:text-[22px]" id="seconds">00</span>
+                  <small class="countdown__item-bottom text-[#e2f2ff] text-center text-sm font-medium leading-normal min-h-[26px] flex items-center justify-center transition-all duration-[0.2s] ease-[ease] tablet:text-xs tablet:min-h-[22px]">Seconds</small>
                 </div>
               </div>
             </div>
@@ -263,34 +267,34 @@
     <section id="events" class="events">
       <div class="events__wrapper container">
         <div class="events__inner">
-          <h2 class="events__title title-h2">События</h2>
+          <h2 class="events__title title-h2 text-center mt-[30px] mb-[30px]">События</h2>
 
           <div class="events__content">
             <div class="events__swiper">
-              <div class="events__swiper-wrapper">
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
+              <div class="events__swiper-wrapper grid grid-cols-[1fr_1fr_1fr] gap-[30px] tablet:grid-cols-[1fr_1fr] l-phone:grid-cols-[1fr]">
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Освобождение от страхов и стереотипов</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Освобождение от страхов и стереотипов</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -299,29 +303,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Механизм принятия решений</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Механизм принятия решений</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -330,29 +334,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Глубокое понимание человеческой природы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Глубокое понимание человеческой природы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -361,29 +365,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Основы каббалы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Основы каббалы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -392,29 +396,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Развитие правильных связей в семье и на работе</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Развитие правильных связей в семье и на работе</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -423,29 +427,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Освобождение от страхов и стереотипов</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Освобождение от страхов и стереотипов</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -454,29 +458,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Механизм принятия решений</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Механизм принятия решений</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -485,29 +489,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Глубокое понимание человеческой природы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Глубокое понимание человеческой природы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -516,29 +520,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Основы каббалы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Основы каббалы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -547,29 +551,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Развитие правильных связей в семье и на работе</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Развитие правильных связей в семье и на работе</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -578,29 +582,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Освобождение от страхов и стереотипов</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Освобождение от страхов и стереотипов</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -609,29 +613,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Механизм принятия решений</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Механизм принятия решений</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -640,29 +644,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Глубокое понимание человеческой природы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Глубокое понимание человеческой природы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -671,29 +675,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Основы каббалы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Основы каббалы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -702,29 +706,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Развитие правильных связей в семье и на работе</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Развитие правильных связей в семье и на работе</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -733,29 +737,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Собрание в зале" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Освобождение от страхов и стереотипов</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Освобождение от страхов и стереотипов</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -764,29 +768,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Михаэль Лайтман" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Механизм принятия решений</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Механизм принятия решений</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -795,29 +799,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-3.jpg" alt="курс Основы каббалы" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Глубокое понимание человеческой природы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Глубокое понимание человеческой природы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -826,29 +830,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-1.jpg" alt="Знания о смысле и цели существования" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Основы каббалы</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Основы каббалы</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -857,29 +861,29 @@
                   </div>
                 </div>
 
-                <div class="events__swiper-slide swiper-slide">
-                  <div class="events__swiper-slide-inner">
-                    <div class="events__swiper-slide-img-wrap">
-                      <img class="events__swiper-slide-img" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
+                <div class="events__swiper-slide swiper-slide h-auto">
+                  <div class="events__swiper-slide-inner h-full border flex flex-col rounded-[20px] border-solid border-[#eeeeee]">
+                    <div class="events__swiper-slide-img-wrap h-[230px]">
+                      <img class="events__swiper-slide-img w-full h-full object-cover rounded-t-[20px]" src="img/events-2.jpg" alt="Развитие правильных связей в семье и на работе" height="400" width="300" />
                     </div>
-                    <div class="events__swiper-slide-content-wrap">
-                      <div class="events__swiper-slide-top">
-                        <div class="events__swiper-slide-date events__swiper-slide-top-item">
+                    <div class="events__swiper-slide-content-wrap flex-auto flex flex-col pt-6 pb-[30px] px-5 tablet:pt-5 tablet:pb-6 tablet:px-4">
+                      <div class="events__swiper-slide-top flex items-center flex-wrap gap-7 mb-4">
+                        <div class="events__swiper-slide-date events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M5.66667 0C6.11191 0 6.47619 0.36 6.47619 0.8V3.2H16.1905V0.8C16.1905 0.36 16.5548 0 17 0C17.4452 0 17.8095 0.36 17.8095 0.8V3.2H19.4286C21.2146 3.2 22.6667 4.635 22.6667 6.4V20.8C22.6667 22.565 21.2146 24 19.4286 24H3.2381C1.45208 24 0 22.565 0 20.8V6.4C0 4.635 1.45208 3.2 3.2381 3.2H4.85714V0.8C4.85714 0.36 5.22143 0 5.66667 0ZM19.4286 4.8H3.2381C2.34256 4.8 1.61905 5.515 1.61905 6.4V8H21.0476V6.4C21.0476 5.515 20.3241 4.8 19.4286 4.8ZM21.0476 9.6H1.61905V20.8C1.61905 21.685 2.34256 22.4 3.2381 22.4H19.4286C20.3241 22.4 21.0476 21.685 21.0476 20.8V9.6Z" fill="#222222" />
                           </svg>
-                          <span>26.01.2025</span>
+                          <span class="opacity-50 font-medium">26.01.2025</span>
                         </div>
-                        <div class="events__swiper-slide-time events__swiper-slide-top-item">
+                        <div class="events__swiper-slide-time events__swiper-slide-top-item inline-flex items-center gap-1.5">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="12.0007" cy="11.9999" r="10.6667" stroke="#222222" stroke-width="1.5" />
                             <path d="M16 13.3334L12 12.0001V6.66675" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <span>09:00 AM</span>
+                          <span class="opacity-50 font-medium">09:00 AM</span>
                         </div>
                       </div>
-                      <h3 class="events__swiper-slide-title title-h3">Развитие правильных связей в семье и на работе</h3>
-                      <div class="events__swiper-slide-btn-wrap">
+                      <h3 class="events__swiper-slide-title title-h3 mb-4">Развитие правильных связей в семье и на работе</h3>
+                      <div class="events__swiper-slide-btn-wrap flex-auto flex items-end">
                         <a href="#" class="events__swiper-slide-btn btn btn--secondary-dark">
                           Принять участие
                         </a>
@@ -899,15 +903,15 @@
   </main>
 
   <footer class="footer" id="footer">
-    <div id="promo-section" class="promo-section">
-      <div class="promo-section__wrapper">
-        <div class="promo-section__inner container">
-          <div class="promo-section__left">
-            <div class="promo-section__left-content">
-              <h2 class="promo-section__title title-h2">Твой путь познакомиться</h2>
-              <span class="promo-section__label">С древней Тайной Мудрости</span>
+    <div id="promo-section" class="promo-section mx-0 my-4 px-4 py-0">
+      <div class="promo-section__wrapper bg-[#003b65] relative rounded-[20px]">
+        <div class="promo-section__inner container relative flex justify-between p-11 tablet:flex-col tablet:px-4 tablet:py-10">
+          <div class="promo-section__left flex-[0_0_50%] flex flex-col justify-between gap-6">
+            <div class="promo-section__left-content flex-[0_0_50%]">
+              <h2 class="promo-section__title title-h2 text-white mb-2.5 tablet:mb-1.5">Твой путь познакомиться</h2>
+              <span class="promo-section__label text-[#f36518] text-xl font-semibold leading-normal tablet:text-base">С древней Тайной Мудрости</span>
             </div>
-            <div class="promo-section__buttons">
+            <div class="promo-section__buttons flex flex-wrap gap-4 tablet:gap-2">
               <a class="promo-section__btn btn btn--primary-light" href="#">
                 Принять участие
               </a>
@@ -917,26 +921,26 @@
               </a>
             </div>
           </div>
-          <div class="promo-section__right">
-            <span class="promo-section__items-title title-h3">Мы будем:</span>
+          <div class="promo-section__right min-w-[480px] desktop:min-w-[unset] tablet:mt-[70px]">
+            <span class="promo-section__items-title title-h3 text-white font-medium block mb-5 tablet:text-lg tablet:mb-3">Мы будем:</span>
             <ul class="promo-section__items">
               <li class="promo-section__item">
-                <a class="promo-section__item-link">
+                <a class="promo-section__item-link flex items-center text-white text-xl font-normal leading-normal transition-all duration-[0.2s] ease-[ease] tablet:text-base">
                   Знакомить вас с первоисточниками
                 </a>
               </li>
               <li class="promo-section__item">
-                <a class="promo-section__item-link">
+                <a class="promo-section__item-link flex items-center text-white text-xl font-normal leading-normal transition-all duration-[0.2s] ease-[ease] tablet:text-base">
                   Знакомить вас с историей
                 </a>
               </li>
               <li class="promo-section__item">
-                <a class="promo-section__item-link">
+                <a class="promo-section__item-link flex items-center text-white text-xl font-normal leading-normal transition-all duration-[0.2s] ease-[ease] tablet:text-base">
                   Знакомить вас с людьми
                 </a>
               </li>
               <li class="promo-section__item">
-                <a class="promo-section__item-link">
+                <a class="promo-section__item-link flex items-center text-white text-xl font-normal leading-normal transition-all duration-[0.2s] ease-[ease] tablet:text-base">
                   Знакомить вас с Каббалой
                 </a>
               </li>
@@ -949,7 +953,7 @@
 
 
 
-    <p class="footer__copyright">
+    <p class="footer__copyright text-center opacity-60 text-sm not-italic font-normal mx-0 my-4 pt-0 pb-4 px-4">
       © Copyright - Bnei Baruch Kabbalah Academy in Europe
     </p>
   </footer>
